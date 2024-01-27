@@ -52,7 +52,7 @@ const Database = () => {
                             <span className='text-sm md:text-sm'>{item.Name}</span>
                             <div className='flex flex-row gap-2 '>
                                 {item.Tags.map((tag,index)=>(
-                                    <span className='border border-[--clr-base-accent] px-2 rounded-2xl text-xs'>{tag}</span>
+                                    <span key={index} className='border border-[--clr-base-accent] px-2 rounded-2xl text-xs'>{tag}</span>
                                 ))}
                             </div>
                         </div>
