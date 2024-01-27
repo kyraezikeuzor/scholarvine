@@ -23,7 +23,7 @@ const Database = () => {
                 </div>
                 
                 {labels.map((item,index)=>(
-                    <div  className='relative flex flex-col gap-2 items-center px-4 py-1 rounded-2xl border border-[--clr-base-accent]'>
+                    <div key={index} className='relative flex flex-col gap-2 items-center px-4 py-1 rounded-2xl border border-[--clr-base-accent]'>
                         <div onClick={()=>handleShowFilterList(index)} className='flex flex-row items-center gap-2 hover:cursor-pointer'>
                             <span className='text-sm md:text-sm'>{item.name} </span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 18 11" fill="none">
@@ -33,7 +33,7 @@ const Database = () => {
                         {showFilterList && filterListIndex==index &&  
                         <div className='z-40 absolute top-8 left-0 shadow-lg min-h-fit max-h-[50vh] min-w-fit overflow-y-auto flex flex-col gap-2 bg-[--clr-base-default] px-4 py-2 border border-[--clr-base-accent] rounded-xl'>
                             {item.list.map((item,index)=>(
-                                <span className='flex flex-row  gap-1'>
+                                <span key={index} className='flex flex-row  gap-1'>
                                     <input type='checkbox'/>
                                     <label>{item}</label>
                                 </span>
@@ -46,7 +46,7 @@ const Database = () => {
             <div className='w-full'>
                 <div className='flex flex-col gap-2'>
                     {opps.map((item,index)=>(
-                    <div className='border border-[--clr-base-accent] rounded-xl p-2 w-full flex flex-row items-center gap-2'>
+                    <div key={index} className='border border-[--clr-base-accent] rounded-xl p-2 w-full flex flex-row items-center gap-2'>
                         <img src={item.SRC} className='rounded-full w-auto h-10'/>
                         <div className='flex flex-col gap-2'>
                             <span className='text-sm md:text-sm'>{item.Name}</span>

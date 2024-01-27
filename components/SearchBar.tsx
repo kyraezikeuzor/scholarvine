@@ -25,7 +25,7 @@ export default function SearchBar() {
 
             {searchResults.length != 0 && <div className='absolute top-8 left-0 right-0 bg-[--clr-base] text-sm shadow-lg p-2 flex flex-col gap-1 rounded-lg border border-[--clr-base-accent]'>
                 {searchResults.map((item,index)=> (
-                    <div className=''>
+                    <div key={index} className=''>
                         {item}
                     </div>
                 ))}

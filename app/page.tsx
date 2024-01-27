@@ -54,7 +54,7 @@ export default function Home() {
       <section className='w-full px-[10vw] flex flex-col flex-wrap gap-5'>
         <span className='text-2xl font-semibold'>Explore ScholarVine</span>
         {opps.map((item,index) => (
-        <div className='w-full flex flex-row gap-2 p-2 bg-[--clr-base-default] border border-[--clr-base-accent] rounded-xl'>
+        <div key={index} className='w-full flex flex-row gap-2 p-2 bg-[--clr-base-default] border border-[--clr-base-accent] rounded-xl'>
           <img className='w-10 h-auto' src={item.SRC}/>
           <div className='flex flex-col'>
             <span className='text-xl font-semibold'>{item.Name}</span>
