@@ -53,12 +53,14 @@ const Navbar = () => {
         }
     }
 
+    const [b, setb] = useState<string | null>(null)
+
     useEffect(() => {
         // Storing data in localStorage
         localStorage.setItem('username', searchQuery);
 
         // Retrieving data from localStorage
-        var username = localStorage.getItem('username');
+        setb(localStorage.getItem('username'));
 
     }, [])
 
@@ -69,8 +71,8 @@ const Navbar = () => {
             
             <nav className='z-50 sticky top-0 flex flex-row items-center gap-5 w-full justify-between py-2 px-[5vw] border-b border-[--clr-base-accent]'>
                 <Logo/>
+                {b}
 
-{username}
 
                 {/*DESKTOP NAVBAR*/}
                 <ul className='hidden md:flex flex-row gap-5 w-full items-center justify-center text-base'>
