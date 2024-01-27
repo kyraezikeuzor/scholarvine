@@ -53,12 +53,16 @@ const Navbar = () => {
         }
     }
 
-    // Storing data in localStorage
-localStorage.setItem('username', searchQuery);
+    useEffect(() => {
+        // Storing data in localStorage
+        localStorage.setItem('username', searchQuery);
 
-// Retrieving data from localStorage
-var username = localStorage.getItem('username');
+        // Retrieving data from localStorage
+        var username = localStorage.getItem('username');
 
+    }, [])
+
+    
     return (
         <>
        {showNavbar && <nav className='z-50 sticky top-0 flex flex-col items-center justify-between shadow-sm backdrop-blur bg-[--clr-base]/50 border-b border-[--clr-base-accent] '> 
