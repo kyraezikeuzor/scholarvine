@@ -15,10 +15,10 @@ const Categories = [
 
 const GradeLevelsofRequiredEducationLevel = ["Freshman", "Sophomore","Junior","Senior","All"]
 
-const Type = ["Internship", "Program", "Scholarship", "Competition", "Challenge" "Award",  "Fellowship", "Club", "Job", "Other"]
+const Type = ["Internship", "Program", "Scholarship", "Competition", "Challenge", "Award",  "Fellowship", "Club", "Job", "Other"]
 
 
-
+/*
 function GenerateOpps(link:string) {
     const config = {
         headers: {
@@ -34,5 +34,5 @@ function GenerateOpps(link:string) {
     ]
 }
 
-/*
+
 */

@@ -67,34 +67,4 @@ type Opportunity = {
     Environment: "In-Person" | "Remote" | "Hybrid"
     DateCreated: Date,
     UsedforGeneration: boolean
-
 }
-
-"
-Cybersecurity
-Software Development 
-Artificial Intelligence
-Computer Science 
-Engineering/Design
-Astronomy
-Biology
-Chemistry
-Physics
-Environmental Science 
-Mathematics 
-Medicine 
-Business 
-Economics 
-Marketing/Advertising 
-Entrepreneurship 
-Leadership
-Government
-Law 
-Politics 
-History 
-Philosophy
-Humanities 
-Film/Video 
-Performing Arts 
-Art/Design
-"
