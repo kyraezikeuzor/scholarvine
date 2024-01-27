@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Location",
+        "list": ["United States", "Worldwide"]
+    },
+    {
+        "name": "Education",
+        "list": ["High School", "Undergraduate", "Graduate"]
+    },
+    {
+        "name": "Categories",
+        "list": ["Service",
+        "Leadership",
+        "Health",
+        "Medicine",
+        "Law",
+        "Engineering",
+        "Technology",
+        "Arts",
+        "Fashion",
+        "Writing",
+        "Culture",
+        "Science",
+        "Research",
+        "Sports",
+        "Athletics",
+        "Business",
+        "Finance",
+        "Entrepreneurship",
+        "Religion",
+        "Philosophy",
+        "Literature",
+        "Music",
+        "History",
+        "Entertainment",
+        "Education",
+        "Social Science",
+        "Software Engineering",
+        "Product Management", 
+        "UX/UI Design", 
+        "Data Science"
+      ]
+    },
+    {
+        "name": "Type",
+        "list": [
+            "Internship",
+            "Program",
+            "Scholarship",
+            "Competition",
+            "Award",
+            "Fellowship",
+            "Club"
+          ]
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "Name": "Research Science Institute",
+        "Company": "CEE",
+        "Description": "lala",
+        "Type": "Internship",
+        "Location": "Austrailia",
+        "ApplicationDeadline": "tomorrow",
+        "EducationLevelRequired": ["highschool"],
+        "GradeLevelsRequired": [9,10,11,12],
+        "Tags": ["Science"],
+        "SRC": "https://static.wixstatic.com/media/a9c49e_5aba0557f0a844c594a92294ac1cf3ea~mv2.png/v1/fill/w_73,h_96,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/LUMIERE_Logo_Symbol_Primary%20color.png",
+        "DateGenerated": "jan",
+        "DateUpdated": "feb"
+    },
+    {
+        "Name": "Software Engineering Intern",
+        "Company": "Apple",
+        "Description": "lala",
+        "Type": "Internship",
+        "Location": "Austrailia",
+        "ApplicationDeadline": "tomorrow",
+        "EducationLevelRequired": ["highschool"],
+        "GradeLevelsRequired": [9,10,11,12],
+        "Tags": ["service", "science"],
+        "SRC": "https://static.wixstatic.com/media/a9c49e_5aba0557f0a844c594a92294ac1cf3ea~mv2.png/v1/fill/w_73,h_96,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/LUMIERE_Logo_Symbol_Primary%20color.png",
+        "DateGenerated": "jan",
+        "DateUpdated": "feb"
+    }
+]
