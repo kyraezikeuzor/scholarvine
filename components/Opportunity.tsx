@@ -22,11 +22,11 @@ type OpportunityProps = {
     Company: string;
     Description:string;
     Type: string;
-    Location: typeof OPPORTUNITY_LOCATIONS[number][];
+    Location: string[];
     Deadline: Date | null;
-    EducationLevel: typeof OPPORTUNITY_EDUCATION_LEVELS[number][];
+    EducationLevel: string[];
     GradeLevel: number[];
-    Tags: typeof OPPORTUNITY_CATEGORIES[number][];
+    Tags: string[];
     Saved: boolean;
 }
 

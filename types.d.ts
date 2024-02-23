@@ -8,21 +8,21 @@ type Opportunity = {
     Company: string;
     Description:string;
     Type: string;
-    Location: typeof OPPORTUNITY_CATEGORIES[number][];
+    Location: string[];
     ApplicationDeadline: Date | null;
-    EducationLevel: typeof OPPORTUNITY_EDUCATION_LEVELS[number][];
+    EducationLevel: string[];
     GradeLevel: number[];
-    Tags: typeof OPPORTUNITY_CATEGORIES[number][];
+    Tags: string[];
 }
 
 type User = {
-    "Id":number;    
-    "FirstName":string;
-    "LastName":string;
-    "SavedOpps":number[];
-    "Username":string;
-    "Password":string;
-    "Picture":string;
+    Id:number;    
+    FirstName:string;
+    LastName:string;
+    SavedOpps:number[];
+    Username:string;
+    Password:string;
+    Picture:string;
 }
 
 //"Internship" | "Program" | "Scholarship" | "Competition" | "Award" | "Fellowship" | "Club"
