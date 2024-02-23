@@ -96,7 +96,9 @@ const Accordion = ({head, body, onCheckOnItem, onCheckOffItem}:AccordionProps) =
             </div>
             <div className='ml-2'>
                 {body.map((item,index)=>(
-                    <div className='flex flex-row gap-2 items-center px-1 cursor-pointer '
+                    <div className='flex flex-row gap-2 
+                    items-center px-1 cursor-pointer' 
+                    key={index}
                     onClick={()=>{handleAccordionItemClick(index)}}>
                         <div className={`h-3 w-3 rounded-sm flex flex-col items-center ${clickAll || checklist[index] ? 'bg-[--clr-base-text]' : 'border border-[--clr-grey-base]'}`}>
                             <Icon icon="Check" color="white"/>

@@ -83,29 +83,33 @@ const Opportunity = ({Id,UserId,Name,Company,Description,Type,Location,Deadline,
                     </span>
                     
                     {Location.map((item,index)=>(
-                        <span className='flex flex-row text-xs text-[--clr-] font-medium border border-[--clr-base-accent] 
-                        px-[8px] py-[2px] rounded-xl bg-[--clr-grey-light]'>
+                        <span className='flex flex-row text-xs text-[--clr-] font-medium border 
+                        border-[--clr-base-accent] px-[8px] py-[2px] rounded-xl bg-[--clr-grey-light]'
+                        key={index}>
                             🗺️ {item}
                         </span>
                     ))}
 
                     {EducationLevel.map((item,index)=>(
-                        <span className='flex flex-row text-xs  font-medium border border-[--clr-base-accent] 
-                        px-[8px] py-[2px] rounded-xl bg-[--clr-grey-light]'>
+                        <span className='flex flex-row text-xs font-medium border 
+                        border-[--clr-base-accent] px-[8px] py-[2px] rounded-xl bg-[--clr-grey-light]'
+                        key={index}>
                             🏫 {item}
                         </span>
                     ))}
 
                     {GradeLevel.map((item,index)=>(
-                        <span className='flex flex-row text-xs  font-medium border border-[--clr-base-accent] 
-                        px-[8px] py-[2px] rounded-xl bg-[--clr-grey-light]'>
+                        <span className='flex flex-row text-xs  font-medium border 
+                        border-[--clr-base-accent] px-[8px] py-[2px] rounded-xl bg-[--clr-grey-light]'
+                        key={index}>
                             {item}
                         </span>
                     ))}
                 
                     {Tags.map((item,index)=>(
-                        <span className='flex flex-row text-xs  font-medium border border-[--clr-base-accent] 
-                        px-[8px] py-[2px] rounded-xl bg-[--clr-grey-light]'>
+                        <span className='flex flex-row text-xs  font-medium border 
+                        border-[--clr-base-accent] px-[8px] py-[2px] rounded-xl bg-[--clr-grey-light]'
+                        key={index}>
                             <p className='text-[--clr-blue-base]'>#</p>
                             {item}
                         </span>

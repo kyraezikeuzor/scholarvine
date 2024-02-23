@@ -22,14 +22,16 @@ export default function Explore(){
                 <section className='grid grid-cols-4 gap-4'>
                     
                     {OPPORTUNITY_TYPES.map((item,index)=>(
-                        <div className='flex flex-row items-center  p-4 font-semibold rounded-lg border-2 border-[--clr-base-accent]'>
+                        <div className='flex flex-row items-center  
+                        p-4 font-semibold rounded-lg border-2 border-[--clr-base-accent]'
+                        key={index}>
                             {item}s
                         </div>
                     ))}
                 </section>
                 <section>
                     {OPPORTUNITIES.map((item,index)=>(
-                        <Opportunity
+                        <Opportunity key={index}
                         Id={item.Id}
                         UserId={item.UserId}
                         Name={item.Name}
@@ -43,10 +45,11 @@ export default function Explore(){
                         />
                     ))}
                 </section>
-                <section className='flex flex-row flex-wrap gap-2'>
-                    
+                <section className='flex flex-row flex-wrap gap-2'>  
                     {OPPORTUNITY_CATEGORIES.map((item,index)=>(
-                        <div className='flex flex-row items-center p-1 bg-[--clr-grey-light] text-sm font-semibold rounded-lg border-2 border-[--clr-base-accent]'>
+                        <div className='flex flex-row items-center p-1 bg-[--clr-grey-light] text-sm 
+                        font-semibold rounded-lg border-2 border-[--clr-base-accent]' 
+                        key={index}>
                             #{item}
                         </div>
                     ))}

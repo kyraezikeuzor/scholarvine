@@ -75,7 +75,7 @@ export default function Home() {
           </div>
           <section className='flex flex-col md:grid grid-cols-4 gap-3'>
             {OPPORTUNITIES.map((item,index) => (
-              <Opportunity
+              <Opportunity key={index}
               Id={item.Id}
               UserId={item.UserId}
               Name={item.Name}
@@ -97,7 +97,10 @@ export default function Home() {
 
           <section className='grid grid-cols-2 md:grid-cols-4 gap-3'>
             {OPPORTUNITY_CATEGORIES_GROUPED.map((item,index)=>(
-              <div className='flex flex-col gap-1 bg-[--clr-base] border border-[--clr-base-accent] p-3 py-4 md:p-8 text-center text-lg rounded-lg shadow-sm'>
+              <div className='flex flex-col gap-1 bg-[--clr-base] 
+              border border-[--clr-base-accent] p-3 py-4 md:p-8 text-center 
+              text-lg rounded-lg shadow-sm' 
+              key={index}>
                 <h3 className='text-sm md:text-lg  font-semibold'>{item.name}</h3>
                 <p className='text-xs md:text-sm'>{item.description}</p>
               </div>

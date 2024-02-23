@@ -117,7 +117,7 @@ const OppTypePage = ({params}:PageProps) => {
                             <h2 className='text-sm md:text-base'>Education</h2>
                             <div className='flex flex-col gap-1'>
                                 {OPPORTUNITY_EDUCATION_LEVELS.map((item,index)=>(
-                                    <Checkbox 
+                                    <Checkbox key={index}
                                     onCheckOn={() => handleAddItem(item,"Education")} 
                                     onCheckOff={() => handleRemoveItem(item, "Education")}>
                                         {item}
@@ -130,21 +130,21 @@ const OppTypePage = ({params}:PageProps) => {
                                     
                             <div> 
                             {filter.find(item => item.name === "Categories")?.list.map((item,index)=>(
-                                <span>{item}</span>
+                                <span key={index}>{item}</span>
                             ))}
                                 <br/>
                                 {filter.find(item => item.name === "Locations")?.list.map((item,index)=>(
-                                <span>{item}</span>
+                                <span key={index}>{item}</span>
                             ))}
                                 <br/>
                             {filter.find(item => item.name === "Education")?.list.map((item,index)=>(
-                                <span>{item}</span>
+                                <span key={index}>{item}</span>
                             ))}
                             </div>
                 
                             <div className='flex flex-col gap-1'>    
                                 {OPPORTUNITY_CATEGORIES_GROUPED.map((item,index)=>(
-                                    <div className='w-full md:w-full'>
+                                    <div className='w-full md:w-full' key={index}>
                                         <Accordion
                                             head=
                                             {<div className='text-sm font-medium flex flex-row relative cursor-pointer'>
@@ -153,7 +153,7 @@ const OppTypePage = ({params}:PageProps) => {
                                             body=
                                             {<div className='ml-2'>
                                                 {item.list.map((item,index)=>(
-                                                    <Checkbox 
+                                                    <Checkbox key={index}
                                                     onCheckOn={() => handleAddItem(item,"Categories")} 
                                                     onCheckOff={() => handleRemoveItem(item, "Categories")}>
                                                         {item}
@@ -169,7 +169,7 @@ const OppTypePage = ({params}:PageProps) => {
                             <h2 className='text-sm md:text-base'>Locations</h2>
                             <div className='flex flex-col gap-1'>
                                 {OPPORTUNITY_LOCATIONS_GROUPED.map((item,index)=>(
-                                    <Accordion
+                                    <Accordion key={index}
                                     head=
                                     {<div className='text-sm font-medium flex flex-row relative cursor-pointer'>
                                         {item.name}
@@ -177,7 +177,7 @@ const OppTypePage = ({params}:PageProps) => {
                                     body=
                                     {<div className='ml-2'>
                                         {item.list.map((item,index)=>(
-                                            <Checkbox 
+                                            <Checkbox key={index}
                                             onCheckOn={() => handleAddItem(item,"Locations")} 
                                             onCheckOff={() => handleRemoveItem(item, "Locations")}>
                                                 {item}
@@ -201,7 +201,7 @@ const OppTypePage = ({params}:PageProps) => {
 
                         {/*OPPORTUNITY*/}
                         {pageOpps.map((item,index)=>(
-                            <Opportunity
+                            <Opportunity key={index}
                             Id={item.Id}
                             UserId={item.UserId}
                             Name={item.Name}
