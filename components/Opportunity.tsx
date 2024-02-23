@@ -21,7 +21,7 @@ type OpportunityProps = {
     Name:string;
     Company: string;
     Description:string;
-    Type: "Internship" | "Program" | "Scholarship" | "Competition" | "Award" | "Fellowship" | "Club";
+    Type: string;
     Location: typeof OPPORTUNITY_LOCATIONS[number][];
     Deadline: Date | null;
     EducationLevel: typeof OPPORTUNITY_EDUCATION_LEVELS[number][];
