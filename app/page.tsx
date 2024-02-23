@@ -1,84 +1,113 @@
 import Image from 'next/image'
-import Navbar from '@/components/Navbar'
-import Database from '@/components/Database'
 import Link from 'next/link'
+
 import Button from '@/components/Button'
 import Icon from '@/components/Icon'
 import SearchBar from '@/components/SearchBar'
+import ReadMore from '@/components/ReadMore'
+import Opportunity from '@/components/Opportunity'
 
-import labels from '@/lib/labels.json'
-import opps from '@/lib/opps.json'
+import { OPPORTUNITY_CATEGORIES, OPPORTUNITY_CATEGORIES_GROUPED, OPPORTUNITY_TYPES } from '@/lib/labels'
+import OPPORTUNITIES from '@/lib/opps.json'
 
 export default function Home() {
 
-  // Find the "Categories" object
-  const categoriesObject = labels.find(item => item.name === 'Categories');
-
-  // Get the length of the "list" array within "Categories"
-  const categoriesLength = categoriesObject ? categoriesObject.list.length : 0;
-
-  // Find the "Categories" object
-  const typeObject = labels.find(item => item.name === 'Type');
-
-  // Get the length of the "list" array within "Categories"
-  const typeLength = typeObject ? typeObject.list.length : 0;
-
-
+  const categoriesObject = OPPORTUNITY_CATEGORIES;
+  const categoriesLength = categoriesObject ? categoriesObject.length : 0;
+  const typeObject = OPPORTUNITY_TYPES;
+  const typeLength = typeObject ? typeObject.length : 0;
 
 
   return (
-    <main className="flex flex-col gap-5">
-      <header className='pt-[10vh] mx-[10vw] flex flex-col gap-5 items-center '>
-        <span className=' border border-[--clr-base-accent] rounded-2xl box-border flex flex-row gap-1 flex-wrap font-medium bg-[--clr-base] py-1 px-4 text-sm md:text-base text-[--clr-grey-dark] text-center w-fit'>
-        Now enhanced with <span>ScholarVine<span className='bg-gradient-to-r from-[#D16EDE] via-[#F3AAD8] to-[#FFB392] to-[#FFB83F] text-transparent bg-clip-text font-semibold'>+</span></span> <Icon className='inline-block' icon='ArrowTopRight' size='sm'/>
+    <main className="flex flex-col items-center gap-10">
+
+      <header className='py-[8vh] px-[8vw] flex flex-col gap-8 items-center'>
+        <span className='w-fit border border-[--clr-base-accent] rounded-2xl px-3 py-2 text-center font-medium text-sm'>
+            Submit a Program to ScholarVine 🡪
         </span>
-        <h1 className='text-center text-5xl md:text-7xl lg:text-[92px] tracking-tighter'>Ace your next exam <br className='hidden md:block lg:block'/>with ScholarVine <span className='bg-gradient-to-r from-[#D16EDE] via-[#F3AAD8] to-[#FFB392] to-[#FFB83F] inline-block text-transparent bg-clip-text'></span></h1>
-        <p className='text-center text-base md:text-lg lg:text-xl'>Search over <span className='text-[--clr-base-text] font-semibold'>{opps.length}+</span> opportunities in over <span className='text-[--clr-base-text] font-semibold'>{categoriesLength}+</span> categories.</p>
-        {/*<div className='flex flex-row gap-5 justify-center items-center'>
-          <Link className='font-medium' href='/signup'>Explore</Link>
-          <Button>Signup</Button>
-          </div>*/}
-        <SearchBar/>
-          
+        <div className='flex flex-col items-center gap-3'>
+          <h1 className='text-center text-4xl md:text-5xl lg:text-6xl tracking-tighter'>
+            Join the team behind the fastest-growing extracurricular database in the world.
+          </h1>
+          <p className='text-center text-lg'>Entrepreneurial communities and software to help you earn online.</p>
+        </div>
+        <div className='flex flex-row gap-1 w-full md:w-3/5 items-center justfy-items-center'>
+          <div className='w-1/6'>
+            <Button path='/explore'>Explore ➝</Button>
+          </div>
+          <div className='w-5/6'>
+            <SearchBar/>
+          </div>
+        </div>
         
       </header>
-      <section className='p-[2vw] mx-[5vw] text-center '>
-        <h2 className='text-xl md:text-xl'>Loved by students at</h2>
-        <div className='flex flex-row place-items-center w-full'>
-          <img className='w-1/3' src='https://mrvian.com/wp-content/uploads/2022/09/logo-harvard-horizontal.png'/>
-          <img className='w-1/3' src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Baylor_University_logo.svg/2560px-Baylor_University_logo.svg.png'/>
-          <img className='w-1/3' src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/UT_Dallas_Wordmark_-_1_Line.svg/2560px-UT_Dallas_Wordmark_-_1_Line.svg.png'/>
+
+      {/*<section className='p-[2vw] mx-[5vw] text-center '>
+        <h2 className='text-base md:text-lg'>Loved by students at</h2>
+        <div className='flex flex-row place-items-center justify-between w-full'>
+          <img className='w-1/4' src='https://mrvian.com/wp-content/uploads/2022/09/logo-harvard-horizontal.png'/>
+          <img className='w-1/4' src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Baylor_University_logo.svg/2560px-Baylor_University_logo.svg.png'/>
+          <img className='w-1/4' src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/UT_Dallas_Wordmark_-_1_Line.svg/2560px-UT_Dallas_Wordmark_-_1_Line.svg.png'/>
+        </div>
+        </section>*/}
+
+      <section className='w-full flex flex-row items-center justify-center gap-10 py-8 px-40 bg-[--clr-grey-light]'>
+        <div className='flex flex-col items-center gap-[2px]'>
+          <span className='text-xl md:text-2xl font-semibold'>123456789</span>
+          <span>Total Purchased on Whop</span>
+        </div>
+        <div className='flex flex-col items-center gap-[2px]'>
+          <span className='text-xl md:text-2xl font-semibold'>123456789</span>
+          <span>Total Purchased on Whop</span>
+        </div>
+        <div className='flex flex-col items-center gap-[2px]'>
+          <span className='text-xl md:text-2xl font-semibold'>123456789</span>
+          <span>Total Purchased on Whop</span>
         </div>
       </section>
 
-      <section className='w-full px-[10vw] flex flex-col flex-wrap gap-5'>
-        <span className='text-2xl font-semibold'>Explore ScholarVine</span>
-        {opps.map((item,index) => (
-        <div key={index} className='w-full flex flex-row gap-2 p-2 bg-[--clr-base-default] border border-[--clr-base-accent] rounded-xl'>
-          <img className='w-10 h-auto' src={item.SRC}/>
-          <div className='flex flex-col'>
-            <span className='text-xl font-semibold'>{item.Name}</span>
-            
-            <span>{item.Company}</span>
-            <span>{item.Location}</span>
+      <section className='w-full px-[4vw] flex flex-col flex-wrap gap-[40px]'>
+
+        <section className='flex flex-col gap-2'>
+          <div>
+            <h2 className='text-xl md:text-2xl font-semibold'>Internships</h2>
+            <p className='text-sm text-[--clr-grey-dark]'>Products currently in high demand.</p>
           </div>
-          
-        </div>))}
-      </section>
+          <section className='flex flex-col md:grid grid-cols-4 gap-3'>
+            {OPPORTUNITIES.map((item,index) => (
+              <Opportunity
+              Id={item.Id}
+              UserId={item.UserId}
+              Name={item.Name}
+              Description={item.Description}
+              Company={item.Company}
+              Type={item.Type}
+              EducationLevel={item.EducationLevel}
+              GradeLevel={item.GradeLevel}
+              Tags={item.Tags}
+              Location={item.Location}
+              />
+            ))}
+          </section>
+        </section>
+        <section className='w-full flex flex-col gap-2'>
+          <div>
+            <h2 className='text-xl md:text-2xl font-semibold'>Explore the Database</h2>
+          </div>
 
+          <section className='grid grid-cols-2 md:grid-cols-4 gap-3'>
+            {OPPORTUNITY_CATEGORIES_GROUPED.map((item,index)=>(
+              <div className='flex flex-col gap-1 bg-[--clr-base] border border-[--clr-base-accent] p-3 py-4 md:p-8 text-center text-lg rounded-lg shadow-sm'>
+                <h3 className='text-sm md:text-lg  font-semibold'>{item.name}</h3>
+                <p className='text-xs md:text-sm'>{item.description}</p>
+              </div>
+            ))}
+          </section>
 
+        </section>
 
-      <section className='mx-[10vw]'>
-        <h2>Save to yor account</h2>
-        <p>Baylor University Harvard University University of Texas at Dallas</p>
       </section>
-
-      <section>
-        Powerful database indexing features
-      </section>
-      <section>
-        Frequently asked questions
-      </section>
+      
       
     </main>
   )

@@ -9,8 +9,9 @@ import Theme from './Theme'
 import Icon from './Icon'
 
 import opps from '@/lib/opps.json'
-import labels from '@/lib/labels.json'
-const oppTypes = labels.find(item => item.name === 'Type');
+import { OPPORTUNITY_TYPES } from '@/lib/labels'
+
+import {getPath} from '@/utils/utils'
 
 const Navbar = () => {
     const pathname = usePathname()
@@ -19,6 +20,7 @@ const Navbar = () => {
     pathname === '/signup' || pathname === '/login' ? showNavbar = false : true;
 
     let showLoginSignup = true
+
     let showUserButtons = false
     pathname === '/home'? showLoginSignup = false : showLoginSignup = true
     pathname === '/home' ? showUserButtons = true : showUserButtons = false
@@ -53,65 +55,77 @@ const Navbar = () => {
         }
     }
 
-    const [b, setb] = useState<string | null>(null)
-
-    useEffect(() => {
-        // Storing data in localStorage
-        localStorage.setItem('username', searchQuery);
-
-        // Retrieving data from localStorage
-        setb(localStorage.getItem('username'));
-
-    }, [])
-
+    
     
     return (
-        <>
-       {showNavbar && <nav className='z-50 sticky top-0 flex flex-col items-center justify-between shadow-sm backdrop-blur bg-[--clr-base]/50 border-b border-[--clr-base-accent] '> 
-            
-            <nav className='z-50 sticky top-0 flex flex-row items-center gap-5 w-full justify-between py-2 px-[5vw] border-b border-[--clr-base-accent]'>
-                <Logo/>
-                {b}
+        <nav className={`${showNavbar == true ? 'flex' : 'hidden'} z-50 sticky top-0 flex-col items-center shadow-sm backdrop-blur bg-[--clr-base]/50 border-b border-[--clr-base-accent]`}> 
+            <nav className='flex flex-row items-center justify-between gap-5 w-full py-[2.5vh] px-[5vw] border-b border-[--clr-base-accent]'>
+                <ul className='w-4/5 flex flex-row items-center gap-8'>
+                    <Logo/>
 
+                    {/*DESKTOP NAVBAR*/}
+                    <ul className='w-2/5 hidden md:flex flex-row gap-5 items-center justify-center text-base'>
+                        
+                        {/*SEARCH BAR*/}
+                        <li className='w-full relative '>
+                            <span className='flex flex-row items-center gap-4 bg-transparent  px-6 border-2 border-[--clr-base-accent] rounded-lg'>
+                                <input onChange={(e) => setSearchQuery(e.target.value)} className='w-full py-2 focus:outline-none border-none bg-transparent text-sm placeholder:text-sm placeholder:text-[--clr-grey-dark] placeholder:font-medium' type='text' placeholder={`Search 'internships'`}/>
+                                <div className='h-10 w-[1px] bg-[--clr-base-accent]'/>
+                                <Icon icon="Search" button={true}/>
+                            </span>
 
-                {/*DESKTOP NAVBAR*/}
-                <ul className='hidden md:flex flex-row gap-5 w-full items-center justify-center text-base'>
-                    <li className='font-medium'><Link href='/home'>Home</Link></li>
-                    <li className='font-medium'><Link href='/explore'>Inbox</Link></li>
-                    <li className='font-medium'><Link href='/explore'>Explore</Link></li>
-                    
-                    <li className='w-1/2 relative'>
-                        <span className='flex flex-row items-center gap-2 bg-[--clr-base-accent] px-4 py-[.1rem]  rounded-2xl'>
-                            <input onChange={(e) => setSearchQuery(e.target.value)} className='w-full focus:outline-none focus:border-none border-transparent bg-transparent text-sm placeholder:text-sm placeholder:text-[--clr-grey-base] placeholder:font-medium' type='text' placeholder=''/>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 11.8487 17.3729 13.551 16.3199 14.9056L21.7071 20.2929L20.2929 21.7071L14.9056 16.3199C13.551 17.3729 11.8487 18 10 18ZM16 10C16 13.3137 13.3137 16 10 16C6.68629 16 4 13.3137 4 10C4 6.68629 6.68629 4 10 4C13.3137 4 16 6.68629 16 10Z" fill=""/>
-                            </svg>
-                        </span>
+                            {searchResults.length != 0 && 
+                            <div className='absolute top-12 left-0 right-0 bg-[--clr-base] text-sm shadow-lg p-2 flex flex-col gap-1 rounded-lg border border-[--clr-base-accent]'>
+                                {searchResults.map((item,index)=> (
+                                    <div key={index} className=''>
+                                        {item}
+                                    </div>
+                                ))}
+                            </div>}
+                        </li>
 
-                        {searchResults.length != 0 && <div className='absolute top-8 left-0 right-0 bg-[--clr-base] text-sm shadow-lg p-2 flex flex-col gap-1 rounded-lg border border-[--clr-base-accent]'>
-                            {searchResults.map((item,index)=> (
-                                <div key={index} className=''>
-                                    {item}
-                                </div>
-                            ))}
-                        </div>}
-
-                    </li>
+                    </ul>
+                    {/*NAVBAR PAGES*/}
+                    <ul className='w-full md:w-1/3 flex flex-row gap-4'>
+                        <li className='hidden md:block text-sm font-medium'>
+                            <Link href='/explore'>Explore</Link>
+                        </li>
+                        <li className='hidden md:block text-sm font-medium'>
+                            <Link href='/submit-a-program'>Submit a Program</Link>
+                        </li>
+                    </ul>
                 </ul>
 
 
+                {/*LOGIN & SIGNUP BUTTONS*/}
+                {showLoginSignup && 
+                <ul className='hidden md:flex flex-row gap-2 w-fit-content items-center'>
+                    <Button path='/signup'>
+                        Signup
+                    </Button>
+                    <Button path='/login'>
+                        Login
+                    </Button>
+                    <li>
+                        <Theme/>
+                    </li>
+                </ul>}
+
+                {/*USER NAVIGATION PANEL*/}
                 {showUserButtons && 
-                <ul className='hidden md:flex flex-row w-30 items-center  relative'>
+                <ul className='hidden md:flex flex-row gap-[2px] w-fit-content items-center relative'>
                     <li onClick={handleNotifModalState}>
                         <Icon icon="Bell" button={true} size='lg' />
                     </li>
                     <li>
                         <Theme/>
                     </li>
-                    
-                    <li onClick={handleSettingsBarState}>
-                        <img  className='w-12 h-auto cursor-pointer box-content p-[2px] rounded-full' src='https://media.licdn.com/dms/image/C5603AQFcuRiwtxIlUg/profile-displayphoto-shrink_200_200/0/1625173224889?e=1711584000&v=beta&t=imAugpf7WkuGBo1wOHNYyju_hMA8-Z7gMdkLycSk3jE'/>
+                    <li onClick={handleSettingsBarState} className='flex flex-row'>
+                        <img className='w-auto h-8 cursor-pointer box-content p-[2px] rounded-full' src='https://media.licdn.com/dms/image/C5603AQFcuRiwtxIlUg/profile-displayphoto-shrink_200_200/0/1625173224889?e=1711584000&v=beta&t=imAugpf7WkuGBo1wOHNYyju_hMA8-Z7gMdkLycSk3jE'/>
+                        <Icon icon='ChevronBottom' size='sm'/>
                     </li>
+
+                    {/* DESKTOP NOTIFICATIONS BAR */}
                     {openNotifModal && 
                     <div className='absolute top-10 right-20 shadow-lg bg-[--clr-base] border border-[--clr-base-accent] w-60 flex flex-col gap-4 text-sm rounded-2xl'>
                         <div className='px-3 py-2'>
@@ -163,21 +177,7 @@ const Navbar = () => {
                     </div>
                     }
 
-                </ul>}
-
-                {showLoginSignup && 
-                <ul className='hidden md:flex flex-row gap-2 items-center'>
-                    <Button path='/signup'>
-                        Signup
-                    </Button>
-                    <Button path='/login'>
-                        Login
-                    </Button>
-                    <li>
-                        <Theme/>
-                    </li>
-                </ul>}
-                
+                </ul>}             
                 
                 {/*MOBILE NAVBAR*/}
                 <ul className='md:hidden flex flex-row items-center flex flex-row gap-2'>
@@ -222,14 +222,16 @@ const Navbar = () => {
             {/*SUB NAVBAR*/}
             <nav className='flex flex-row items-center w-full py-2 px-[5vw]'>
                 <ul className='overflow-x-auto w-full flex flex-row gap-5'>
-                    {oppTypes && oppTypes.list.map((item,index)=>(
-                        <li key={index} className='text-sm font-medium'><Link href={`/explore/${item.toLowerCase()}s`}>{item}s</Link></li>
+                    {OPPORTUNITY_TYPES && OPPORTUNITY_TYPES.map((item,index)=>(
+                        <li key={index} className={`${pathname === `/categories/${item.toLowerCase()}s` && 'border-b-2 border-[--clr-base-text]'} text-sm font-medium`}>
+                            <Link href={`/categories/${item.toLowerCase()}s`}>
+                                {item}s
+                            </Link>
+                        </li>
                     ))}
                 </ul>
             </nav>
-        </nav>}
-        </>
- 
+        </nav>
     )
 }
 

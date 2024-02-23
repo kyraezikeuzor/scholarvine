@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default function Programs() {
+export default function Explore(){
 
     return (
         <main>

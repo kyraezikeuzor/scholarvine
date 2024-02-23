@@ -1,0 +1,22 @@
+.main {
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    padding: 4vh 5vw;
+    width:100%;
+}
+
+.section {
+    padding: 4vh 0;
+    display:grid;
+    grid-template-columns: 3fr 10fr;
+    gap: 5px;
+}
+
+@media screen and (max-width: 760px) {
+    .section {
+        display:flex;
+        flex-direction:column-reverse;
+        gap:40px;
+    }
+}

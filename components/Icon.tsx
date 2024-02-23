@@ -1,5 +1,5 @@
 import React from 'react'
-import icons from '@/lib/icons.json'
+import icons from '@/assets/icons.json'
 
 type IconD = typeof icons[number]['d'];
 
@@ -28,7 +28,7 @@ const Icon = ({icon, color, onClick, className,size, button}: IconProps) => {
     return (
         <svg 
                 onClick={onClick}
-                className={`${className} ${button && 'p-[4px] rounded-full flex flex-col items-center hover:cursor-pointer hover:bg-[--clr-base-accent]  box-content'}`}
+                className={`${className} max-w-full ${button && 'p-[4px] rounded-full flex flex-col items-center hover:cursor-pointer hover:bg-[--clr-base-accent]  box-content'}`}
                 style={{ display: 'block', margin: 'auto' }}   
                 width={size === 'sm' ? '16' : size === 'lg' ? '26' : '24' } 
                 height={size === 'sm' ? '16' : size === 'lg' ? '26' : '24' }  
