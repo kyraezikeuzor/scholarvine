@@ -61,7 +61,7 @@ const OppTypePage = ({params}:PageProps) => {
         let listFilter = filter.find(item => item.name === listName);
 
         if (listFilter) {
-            let updatedList = []
+            let updatedList: any[] = [];
             for (let i = 0; i < listFilter.list.length; i++) {
                 if (listFilter.list[i] !== item) {
                     updatedList.push(listFilter.list[i])
