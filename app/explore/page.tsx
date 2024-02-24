@@ -32,6 +32,7 @@ export default function Explore(){
                 <section>
                     {OPPORTUNITIES.map((item,index)=>(
                         <Opportunity key={index}
+                        ApplicationDeadline={null}
                         Id={item.Id}
                         UserId={item.UserId}
                         Name={item.Name}
