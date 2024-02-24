@@ -31,11 +31,11 @@ export function getDate(date:any) {
     return d;
   }
   
-  export function getBool(bool) {
+  export function getBool(bool:boolean) {
     return Boolean(bool) == true ? "Yes" : "No";
   }
   
-  
+  /*
   export function handleChange(componentName, setComponent, componentList) {
     for (let i = 0; i < componentList.length; i++) {
       if (componentList[i].name == componentName) {
@@ -43,4 +43,4 @@ export function getDate(date:any) {
       }
     }
   }
-  
+  */
