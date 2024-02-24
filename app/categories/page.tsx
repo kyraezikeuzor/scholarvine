@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Database from '@/components/Database'
 
 export default function Explore() {
 
