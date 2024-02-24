@@ -202,6 +202,7 @@ const OppTypePage = ({params}:PageProps) => {
                         {/*OPPORTUNITY*/}
                         {pageOpps.map((item,index)=>(
                             <Opportunity key={index}
+                            ApplicationDeadline={null}
                             Id={item.Id}
                             UserId={item.UserId}
                             Name={item.Name}

@@ -23,14 +23,13 @@ type OpportunityProps = {
     Description:string;
     Type: string;
     Location: string[];
-    Deadline: Date | null;
+    ApplicationDeadline: Date | null;
     EducationLevel: string[];
     GradeLevel: number[];
     Tags: string[];
-    Saved: boolean;
 }
 
-const Opportunity = ({Id,UserId,Name,Company,Description,Type,Location,Deadline,EducationLevel,GradeLevel,Tags,Saved}:OpportunityProps) => {
+const Opportunity = ({Id,UserId,Name,Company,Description,Type,Location,ApplicationDeadline,EducationLevel,GradeLevel,Tags}:OpportunityProps) => {
 
     const [save, setSave] = useState(false)
     const handleSave = () => {
