@@ -76,6 +76,7 @@ export default function Home() {
           <section className='flex flex-col md:grid grid-cols-4 gap-3'>
             {OPPORTUNITIES.map((item,index) => (
               <Opportunity key={index}
+              ApplicationDeadline={null}
               Id={item.Id}
               UserId={item.UserId}
               Name={item.Name}
