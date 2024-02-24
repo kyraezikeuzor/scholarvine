@@ -9,17 +9,6 @@ export function getPath(text:string) {
   return finalString;
 }
 
-function generateOpportunityId(opportunity: Opportunity): string {
-  // Concatenate relevant properties to create a unique string
-  const idString = `${opportunity.Name}${opportunity.Company}${opportunity.Type}${opportunity.Description}${opportunity.ApplicationDeadline}${opportunity.GradeLevel.join(',')}`;
-
-  // Generate a hash of the concatenated string using SHA256
-  const hash = crypto.createHash('sha256').update(idString).digest('hex');
-
-  // Return the hash as the unique ID
-  return hash;
-}
-
 export function getPathUndo(text:string) {
     // Remove leading slash
     let trimmedString = text.slice(1);
