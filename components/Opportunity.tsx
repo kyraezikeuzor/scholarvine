@@ -48,41 +48,50 @@ const Opportunity = ({Id,UserId,Name,Company,Description,Type,Location,Applicati
 
 
     return (
-        <div className='relative flex flex-row gap-5 items-center px-4 py-4 border-2 border-[--clr-base-accent] rounded-xl '>
+        <div className='relative flex flex-row gap-2 items-center px-4 py-4 border-2 border-[--clr-base-accent] rounded-xl bg-[--clr-base]'>
                             
             <Icon onClick={handleSave} 
             icon={save ? "BookmarkFilled" : "Bookmark"} 
             className='absolute top-3 right-3 cursor-pointer'
             />
             
-            <div className='w-full flex flex-col gap-2'>
-                <div className='flex flex-row gap-4'>
-                    <div className='flex flex-col gap-1'>
-                        <h2 className='text-base font-medium items-center leading-5 hover:text-[--clr-blue-base] '>
-                            <Link href={`/explore/o/${Id+1}`}>{Name}</Link>
-                        </h2> 
-                        <span className='flex flex-row gap-1 items-center'>
-                            <img className='w-4 h-4 rounded-full' src={user?.Picture}/>
-                            <span className='text-xs font-medium'>
-                                Posted by <Link href={`/explore/u/${user?.Username}`}><b>@{user?.Username}</b></Link>
+            <div className='w-full flex flex-col gap-1'>
+                <div className='flex flex-col gap-1'>
+                    <h2 className='text-[15px] font-medium items-center leading-5 hover:text-[--clr-grey-base] mr-[24px]'>
+                        <Link  href={`/explore/o/${Id+1}`}>
+                            <span className='mr-2'>
+                                {Name}
                             </span>
+                            <span className='inline-block text-[11px] font-medium border border-[--clr-base-accent] 
+                                px-[8px] py-[1px] rounded-xl bg-transparent'>
+                            {Type === 'Internship' ? '🌱' : Type === 'Program' ? '🌻' : Type === 'Scholarship' ? '💲' 
+                            : Type === 'Competition' ? '🧩' : Type === 'Fellowship' ? '🛠️' :
+                            Type === 'Club' ? '🌎' : ''} {Type}
+                            </span>
+                        </Link> 
+                        
+                    </h2> 
+                    <span className='flex flex-row gap-1 items-center'>
+                        <img className='w-4 h-4 rounded-full' src={user?.Picture}/>
+                        <span className='cursor-pointer text-xs font-medium hover:text-[--clr-grey-base]'>
+                            Posted by <Link href={`/explore/u/${user?.Username}`}><b>@{user?.Username}</b></Link>
                         </span>
-                    </div>
-                </div> 
+                    </span>
+                </div>
                 
                 <span className='w-full text-xs md:text-xs flex items-center  '>
-                    <ReadMore text={Description} charCount={75} noButton/>
+                    <ReadMore text={Description} charCount={50} noButton/>
                 </span>
                 
                 <span className='w-full flex flex-row flex-wrap items-center gap-[5px]'>
 
-                    <span className='text-xs font-medium border border-[--clr-base-accent] 
+                    <span className='flex flex-row items-center text-[11px] font-medium border border-[--clr-base-accent] 
                     px-[8px] py-[2px] rounded-xl bg-[--clr-grey-light]'>
                         🌐 {Company}
                     </span>
                     
                     {Location.map((item,index)=>(
-                        <span className='flex flex-row text-xs text-[--clr-] font-medium border 
+                        <span className='flex flex-row items-center text-[11px] text-[--clr-] font-medium border 
                         border-[--clr-base-accent] px-[8px] py-[2px] rounded-xl bg-[--clr-grey-light]'
                         key={index}>
                             🗺️ {item}
@@ -90,7 +99,7 @@ const Opportunity = ({Id,UserId,Name,Company,Description,Type,Location,Applicati
                     ))}
 
                     {EducationLevel.map((item,index)=>(
-                        <span className='flex flex-row text-xs font-medium border 
+                        <span className='flex flex-row items-center text-[11px] font-medium border 
                         border-[--clr-base-accent] px-[8px] py-[2px] rounded-xl bg-[--clr-grey-light]'
                         key={index}>
                             🏫 {item}
@@ -98,7 +107,7 @@ const Opportunity = ({Id,UserId,Name,Company,Description,Type,Location,Applicati
                     ))}
 
                     {GradeLevel.map((item,index)=>(
-                        <span className='flex flex-row text-xs  font-medium border 
+                        <span className='flex flex-row items-center text-[11px] font-medium border 
                         border-[--clr-base-accent] px-[8px] py-[2px] rounded-xl bg-[--clr-grey-light]'
                         key={index}>
                             {item}
@@ -106,7 +115,7 @@ const Opportunity = ({Id,UserId,Name,Company,Description,Type,Location,Applicati
                     ))}
                 
                     {Tags.map((item,index)=>(
-                        <span className='flex flex-row text-xs  font-medium border 
+                        <span className='flex flex-row items-center text-[11px]  font-medium border 
                         border-[--clr-base-accent] px-[8px] py-[2px] rounded-xl bg-[--clr-grey-light]'
                         key={index}>
                             <p className='text-[--clr-blue-base]'>#</p>

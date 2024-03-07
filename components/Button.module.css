@@ -3,4 +3,11 @@
     background-color:var(--clr-blue-base);
     border-radius: 18px;
     color: white;
+    white-space: nowrap
+}
+
+.outline {
+    background-color: transparent;
+    border:1px solid var(--clr-grey-base);
+    color: var(--clr-grey-dark);
 }

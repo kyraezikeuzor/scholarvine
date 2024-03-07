@@ -20,6 +20,7 @@ type User = {
     FirstName:string;
     LastName:string;
     SavedOpps:number[];
+    "PostedOpps":number[];
     Username:string;
     Password:string;
     Picture:string;

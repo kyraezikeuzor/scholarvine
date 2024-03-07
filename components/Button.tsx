@@ -5,20 +5,21 @@ import styles from './Button.module.css'
 type ButtonProps = {
     children: React.ReactNode,
     path?: string;
+    outline?:true | false;
 }
 
-const Button = ({children, path}: ButtonProps) => {
+const Button = ({children, path, outline}: ButtonProps) => {
     return (
         <>
             {
                 path ? 
                 <Link href={path}>
-                    <button className={styles.button}>
+                    <button className={outline == true ? `${styles.outline} ${styles.button}` : `${styles.button}`}>
                         {children}
                     </button>
                 </Link>
                 :
-                <button className={styles.button}>
+                <button className={outline == true ? `${styles.outline} ${styles.button}` : `${styles.button}`}>
                     {children}
                 </button>
             }

@@ -4,6 +4,7 @@
         "FirstName":"Lorelai",
         "LastName":"Gilmore",
         "SavedOpps":[0],
+        "PostedOpps":[0,1,2],
         "Username":"lorelaig2",
         "Password":"123456",
         "Picture":"https://media.licdn.com/dms/image/C5603AQFcuRiwtxIlUg/profile-displayphoto-shrink_200_200/0/1625173224889?e=1711584000&v=beta&t=imAugpf7WkuGBo1wOHNYyju_hMA8-Z7gMdkLycSk3jE"
@@ -12,9 +13,30 @@
         "Id":1,
         "FirstName":"Chetachi",
         "LastName":"Ezikeuzor",
-        "SavedOpps":[0],
+        "SavedOpps":[0,9,2],
+        "PostedOpps":[2,9,3],
         "Username":"chelsisxr13",
         "Password":"123456",
         "Picture":"https://media.licdn.com/dms/image/C5603AQFcuRiwtxIlUg/profile-displayphoto-shrink_200_200/0/1625173224889?e=1711584000&v=beta&t=imAugpf7WkuGBo1wOHNYyju_hMA8-Z7gMdkLycSk3jE"
+    },
+    {
+        "Id":2,
+        "FirstName":"Rory",
+        "LastName":"Gilmore",
+        "SavedOpps":[0,4],
+        "PostedOpps":[5,6],
+        "Username":"roryg10",
+        "Password":"54444",
+        "Picture":"https://i.redd.it/shego-cosplay-by-me-i-v0-khy6ftqwdeoa1.jpg?width=3464&format=pjpg&auto=webp&s=49807a14257c62ac604c4fff5368dfa16468fbbc"
+    },
+    {
+        "Id":3,
+        "FirstName":"Teresa",
+        "LastName":"Sillah",
+        "SavedOpps":[0,4],
+        "PostedOpps":[5,6],
+        "Username":"teresasillah12",
+        "Password":"54444",
+        "Picture":"https://i.pinimg.com/564x/83/d5/61/83d561a03100a3be6bab5814f2b78b99.jpg"
     }
 ]

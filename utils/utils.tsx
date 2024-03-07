@@ -35,12 +35,12 @@ export function getDate(date:any) {
     return Boolean(bool) == true ? "Yes" : "No";
   }
   
-  /*
-  export function handleChange(componentName, setComponent, componentList) {
+  
+  export function handleViewChange(componentName:any, setComponent:any, componentList:any) {
     for (let i = 0; i < componentList.length; i++) {
       if (componentList[i].name == componentName) {
-        return setComponent(componentList[i].component);
+        return setComponent(componentList[i]);
       }
     }
   }
-  */
+  
