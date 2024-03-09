@@ -1,18 +1,10 @@
 [
     {
-        "name" : "About",
-        "pages" : ["Join the Team"]
-    },
-    {
-        "name" : "Post Programs",
-        "pages" : ["Scholars"]
-    },
-    {
         "name" : "Resources",
-        "pages" : ["Programs"]
+        "pages" : ["Our Team & Board","Philosophy","Jobs"]
     },
     {
-        "name" : "My Account",
-        "pages" : ["Settings"]
+        "name" : "Community",
+        "pages" : ["Press Inquiries","Donate","Community Events","Code of Conduct"]
     }
 ]

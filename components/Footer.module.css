@@ -1,5 +1,13 @@
-.footer {
+.section {
     display:grid;
-    grid-template-columns: 4fr 3fr;
-    gap:50px;
+    grid-template-columns: 3fr 2fr 3fr;
+    gap:80px;
+}
+
+@media (max-width: 768px) {
+    .section {
+        display:flex;
+        flex-direction:column;
+        gap:40px;
+    }
 }
