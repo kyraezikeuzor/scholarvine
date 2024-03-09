@@ -59,7 +59,7 @@ const Opportunity = ({Id,UserId,Name,Company,Description,Type,Location,Applicati
                 <div className='flex flex-col gap-1'>
                     <h2 className='text-[15px] font-medium items-center leading-5 hover:text-[--clr-grey-base] mr-[24px]'>
                         <Link  href={`/explore/o/${Id+1}`}>
-                            <span className='mr-2'>
+                            <span className='mr-2 font-semibold'>
                                 {Name}
                             </span>
                             <span className='inline-block text-[11px] font-medium border border-[--clr-base-accent] 

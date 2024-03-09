@@ -235,7 +235,7 @@ const ExplorePage = () => {
                 </div>
 
                 {/*OPPORTUNITY CARDS*/}
-                <section className='flex flex-col md:grid md:grid-cols-2 lg:md:grid-cols-3 2xl:grid-cols-6 gap-3'>
+                <section className='flex flex-col md:grid md:grid-cols-2 lg:md:grid-cols-3 4xl:grid-cols-6 gap-3'>
                     {/*OPPORTUNITY*/}
                     {pageOpps.map((item,index)=>(
                         <OpportunityComponent key={index}

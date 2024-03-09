@@ -58,7 +58,7 @@ const OppPage = ({params}:PageProps) => {
                 </div>
                 <span className='flex flex-row gap-1'>
                     {opp?.Tags.map((item,index)=>(
-                        <span>{item}</span>
+                        <span key={index}>{item}</span>
                     ))}
                 </span>
             </div>

@@ -27,8 +27,8 @@ export default function Home() {
         </span>
 
         <div className='flex flex-col items-center gap-3'>
-          <h1 className='text-center text-4xl md:text-5xl lg:text-5xl tracking-tighter'>
-            Join the team behind the fastest-growing extracurricular database in the world.
+          <h1 className='text-center text-4xl md:text-5xl lg:text-6xl tracking-tighter'>
+            Explore the fastest-growing <br className='hidden md:block'/> extracurricular database in the world.
           </h1>
           <p className='text-center text-lg'>Entrepreneurial communities and software to help you earn online.</p>
         </div>

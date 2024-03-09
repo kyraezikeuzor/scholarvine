@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function CommunityPage() {
     return (
-        <main>
+        <main className='flex flex-col items-center justify-center font-bold'>
             Coming Soon
         </main>
     )
