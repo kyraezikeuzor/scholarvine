@@ -48,7 +48,7 @@ const Opportunity = ({Id,UserId,Name,Company,Description,Type,Location,Applicati
 
 
     return (
-        <div className='relative flex flex-row gap-2 items-center px-4 py-4 border-2 border-[--clr-base-accent] rounded-xl bg-[--clr-base]'>
+        <div className='relative flex flex-row gap-2 items-center px-4 py-4 border-[3px] border-[--clr-base-accent] rounded-xl bg-[--clr-base]'>
                             
             <Icon onClick={handleSave} 
             icon={save ? "BookmarkFilled" : "Bookmark"} 

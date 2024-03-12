@@ -176,47 +176,53 @@ const ExplorePage = () => {
     return (
         <main className={styles.main} onClick={handleClearFilterModals}>
 
-            {/*DATABASE*/}
-            <section className=' flex flex-col gap-3 '>
+            {/*TYPE SELECTION & DATABASE*/}
+            <section className='flex flex-col gap-5'>
+
                 {/*MOBILE FILTER NAVBAR*/}
-                <div className='fixed top-[16vh] right-0 left-0 md:relative md:top-0 flex flex-col 
-                gap-2 py-2 px-2 z-40 shadow-sm backdrop-blur bg-[--clr-base]/50 md:shadow-none'>
-                    <div className='flex flex-row items-center gap-1 md:hidden'>
-                        {subfilters?.map((item,index)=>(
-                            <div key={index} className='relative'>
-                                <span className='flex flex-row gap-1 items-center text-sm font-medium 
-                                rounded-2xl border border-[--clr-grey-base] px-3 py-[2px]'
-                                onClick={()=>handleMobileSubfilter(index)}>
-                                    <span>{item}</span>
-                                    <Icon icon="ChevronBottom" size="sm"/>
-                                </span >
-                                {openMobileSubfilter && mobileSubfilterIndex==index && 
-                                <div className='fixed flex flex-col gap-1  z-50'>
-                                    {OPPORTUNITY_CATEGORIES_GROUPED.map((item,index)=>(
-                                        <Accordion key={index}
-                                            head=
-                                            {<div className='text-sm font-medium flex flex-row relative cursor-pointer'>
-                                                {item.name}
-                                            </div>}
-                                            body=
-                                            {<div className='ml-2'>
-                                                {item.list.map((item,index)=>(
-                                                    <Checkbox key={index}
-                                                    onCheckOn={() => handleAddItem(item,mobileSubfilterName)} 
-                                                    onCheckOff={() => handleRemoveItem(item, mobileSubfilterName)}>
-                                                        {item}
-                                                    </Checkbox>
-                                                ))}
-                                            </div>}
-                                        />                    
-                                    ))}
-                                </div>}
-                            </div>
-                        ))}
-                    </div>
-                    
-                    {/*DESKTOP & MOBILE OPPORTUNITY TYPE SELECTION*/}
-                    <div className='flex flex-row flex-wrap gap-2'>
+                <div className='flex flex-row items-center gap-1 md:hidden 
+                sticky top-[16vh] right-0 left-0 md:relative md:top-0
+                py-2 px-2 z-40 shadow-sm backdrop-blur bg-[--clr-base]/50 md:shadow-none '>
+
+                    {subfilters?.map((item,index)=>(
+                        <div key={index} className='relative'>
+                            <span className='flex flex-row gap-1 items-center text-sm font-medium 
+                            rounded-2xl border border-[--clr-grey-base] px-3 py-[2px]'
+                            onClick={()=>handleMobileSubfilter(index)}>
+                                <span>{item}</span>
+                                <Icon icon="ChevronBottom" size="sm"/>
+                            </span >
+                            {openMobileSubfilter && mobileSubfilterIndex==index && 
+                            <div className='fixed flex flex-col gap-1  z-50'>
+
+                                {OPPORTUNITY_CATEGORIES_GROUPED.map((item,index)=>(
+                                    <Accordion key={index}
+                                        head=
+                                        {<div className='text-sm font-medium flex flex-row relative cursor-pointer'>
+                                            {item.name}
+                                        </div>}
+                                        body=
+                                        {<div className='ml-2'>
+                                            {item.list.map((item,index)=>(
+                                                <Checkbox key={index}
+                                                onCheckOn={() => handleAddItem(item,mobileSubfilterName)} 
+                                                onCheckOff={() => handleRemoveItem(item, mobileSubfilterName)}>
+                                                    {item}
+                                                </Checkbox>
+                                            ))}
+                                        </div>}
+                                    />                    
+                                ))}
+
+                            </div>}
+                        </div>
+                    ))}
+                </div>
+
+
+                {/*DESKTOP & MOBILE OPPORTUNITY TYPE SELECTION*/}
+                <div className='flex flex-row justify-between'>
+                    <div className='flex flex-row flex-wrap items-center gap-2'>
                         {OPPORTUNITY_TYPES.map((item,index)=>(
                             <Checkbox key={index} rounded 
                             onCheckOn={()=> handleAddItem(item,'Types')}
@@ -227,15 +233,15 @@ const ExplorePage = () => {
                         ))}
                     </div>
 
-                    
+                    <div className='mt-[24vh] md:mt-0 text-sm text-right font-medium'>
+                        {pageOpps.length} {`Search Result${pageOpps.length != 1 ? 's' : ''}`}
+                    </div>
                 </div>
 
-                <div className='mt-[24vh] md:mt-0 text-sm text-right font-medium'>
-                       {pageOpps.length} {`Search Result${pageOpps.length != 1 ? 's' : ''}`}
-                </div>
 
-                {/*OPPORTUNITY CARDS*/}
+                {/*DATABASE*/}
                 <section className='flex flex-col md:grid md:grid-cols-2 lg:md:grid-cols-3 4xl:grid-cols-6 gap-3'>
+
                     {/*OPPORTUNITY*/}
                     {pageOpps.map((item,index)=>(
                         <OpportunityComponent key={index}
@@ -253,22 +259,12 @@ const ExplorePage = () => {
                         />
                     ))}
                 </section>
+
             </section>
 
             {/*FILTER*/}
-            <section className='hidden md:flex flex-col gap-3 w-1/4 max-h-[80vh] fixed top-[16vh] right-[3vw] px-5 overflow-y-auto'>
-                <div className='flex flex-col gap-1'>
-                    <h2 className='text-sm md:text-base'>Education</h2>
-                    <div className='flex flex-col gap-1'>
-                        {OPPORTUNITY_EDUCATION_LEVELS.map((item,index)=>(
-                            <Checkbox key={index}
-                            onCheckOn={() => handleAddItem(item,"Education")} 
-                            onCheckOff={() => handleRemoveItem(item, "Education")}>
-                                {item}
-                            </Checkbox>
-                        ))}
-                    </div>
-                </div>
+            <section className='hidden md:flex sticky flex-col gap-3 w-full max-h-[80vh] top-[16vh] right-[3vw] px-5 overflow-y-auto'>
+
                 <div className='flex flex-col gap-1'>
                     <h2 className='text-sm md:text-base'>Categories</h2>
         
@@ -293,6 +289,20 @@ const ExplorePage = () => {
                         ))}
                     </div>
                 </div>
+
+                <div className='flex flex-col gap-1'>
+                    <h2 className='text-sm md:text-base'>Education</h2>
+                    <div className='flex flex-col gap-1'>
+                        {OPPORTUNITY_EDUCATION_LEVELS.map((item,index)=>(
+                            <Checkbox key={index}
+                            onCheckOn={() => handleAddItem(item,"Education")} 
+                            onCheckOff={() => handleRemoveItem(item, "Education")}>
+                                {item}
+                            </Checkbox>
+                        ))}
+                    </div>
+                </div>
+
                 <div className='flex flex-col gap-1'>
                     <h2 className='text-sm md:text-base'>Locations</h2>
                     <div className='flex flex-col gap-1'>
@@ -316,8 +326,8 @@ const ExplorePage = () => {
                         ))}
                     </div>
                 </div>
-            </section>
 
+            </section>
     </main>
     )
 }

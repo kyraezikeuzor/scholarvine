@@ -7,6 +7,8 @@ import SearchBar from '@/components/SearchBar'
 import ReadMore from '@/components/ReadMore'
 import Opportunity from '@/components/Opportunity'
 
+import ExplorePage from './explore/ExplorePage'
+
 import { OPPORTUNITY_CATEGORIES, OPPORTUNITY_CATEGORIES_GROUPED, OPPORTUNITY_TYPES } from '@/lib/labels'
 import OPPORTUNITIES from '@/lib/opps.json'
 
@@ -19,19 +21,24 @@ export default function Home() {
 
 
   return (
-    <main className="flex flex-col items-center gap-5">
-      <header className='py-[8vh] px-[8vw] flex flex-col gap-5 items-center'>
+    <main className="flex flex-col items-center gap-5 py-[5vh] ">
 
-        <span className='w-fit border border-[--clr-grey-base] rounded-2xl px-6 py-1 text-center font-medium text-sm'>
-            Submit a Program to Sprig 🡪
+      <header className='py-[2vh] px-[5vw] flex flex-col gap-2 items-center'>
+
+        <span className='w-fit border border-[--clr-blue-light] text-[--clr-blue-dark] 
+        bg-[--clr-blue-light] rounded-2xl px-4 py-1 text-center font-medium text-base'>
+            Submit a Program to Sprig <Icon icon="ArrowTopRight" size="sm" className="fill-[--clr-blue-dark]"/>
         </span>
 
         <div className='flex flex-col items-center gap-3'>
-          <h1 className='text-center text-4xl md:text-5xl lg:text-6xl tracking-tighter'>
-            Explore the fastest-growing <br className='hidden md:block'/> extracurricular database in the world.
+          <h1 className='text-center text-6xl md:text-7xl lg:text-[92px] tracking-tighter'>
+            Explore Sedge
           </h1>
-          <p className='text-center text-lg'>Entrepreneurial communities and software to help you earn online.</p>
+          <p className='text-center text-lg md:text-xl text-[--clr-grey-dark]'>
+            Sedge provides a database of 100s of opportunities
+          </p>
         </div>
+
         <div className='flex flex-col md:flex-row gap-3 w-full md:w-3/5 items-center justify-center'>
           <div className='w-full md:w-5/6 '>
             <SearchBar/>
@@ -44,33 +51,7 @@ export default function Home() {
       </header>
 
       
-
-      <section className='w-full py-[4vh] px-[3vw] flex flex-col gap-[40px]'>
-        
-        <section className='flex flex-col gap-2'>
-
-          <section className='flex flex-col md:grid grid-cols-4 gap-2'>
-            {OPPORTUNITIES.map((item,index) => (
-              <Opportunity key={index}
-              ApplicationDeadline={null}
-              Id={item.Id}
-              UserId={item.UserId}
-              Name={item.Name}
-              Description={item.Description}
-              Company={item.Company}
-              Type={item.Type}
-              EducationLevel={item.EducationLevel}
-              GradeLevel={item.GradeLevel}
-              Tags={item.Tags}
-              Location={item.Location}
-              />
-            ))}
-          </section>
-
-        </section>
-        
-
-      </section>
+      <ExplorePage/>
       
       
     </main>

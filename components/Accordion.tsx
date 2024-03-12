@@ -17,7 +17,7 @@ const Accordion = ({head, body}:AccordionProps) => {
 
     return (
 
-        <div className='bg-[--clr-base] rounded-xl border-2 px-[10px] py-2 border-[--clr-base-accent]'>
+        <div className='bg-[--clr-base] rounded-xl border-[3px] px-[10px] py-2 border-[--clr-base-accent]'>
             <div className='relative cursor-pointer' onClick={handleAccordionClick}>
                 {head}
                 <Icon className='absolute top-1 right-0' size='sm' icon={click ? 'ChevronLeft':'ChevronBottom'}/>

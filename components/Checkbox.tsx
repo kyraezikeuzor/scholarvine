@@ -40,7 +40,7 @@ const Checkbox = ({children, onCheckOn, onCheckOff,rounded}: CheckboxProps) => {
             </div>
           :
             <div onClick={() => setClick(!click)} className={`flex flex-row items-center gap-1 text-sm font-medium rounded-2xl px-3 py-[2px] 
-            border border-[--clr-base-accent] cursor-pointer ${click ? 'border-none bg-[--clr-blue-light] text-[--clr-blue-base]' : ''} `}>
+            border-[3px] border-[--clr-base-accent] cursor-pointer ${click ? 'border-none bg-[--clr-blue-light] text-[--clr-blue-dark]' : ''} `}>
               <span>
                 {click ? '-' :  '+'}
               </span>

@@ -1,6 +1,6 @@
 .button {
     padding:.4rem 1rem;
-    background-color:var(--clr-blue-base);
+    background-color:var(--clr-blue-dark);
     border-radius: 18px;
     color: white;
     white-space: nowrap
