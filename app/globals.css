@@ -33,7 +33,7 @@
     
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   :root {
     --clr-base: #373535;
     --clr-base-text: #F9F8F8;
@@ -49,9 +49,8 @@
     --clr-green-base: rgb(120, 172, 61);
     --clr-green-light: rgb(182, 224, 133);
   }
-}
+}*/
 
-/*#0D84FA*/
 
 :root.dark {
   --clr-base: #1B1C22;
