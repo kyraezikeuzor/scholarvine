@@ -27,7 +27,7 @@ export default function Home() {
 
         <span className='w-fit border border-[--clr-blue-light] text-[--clr-blue-dark] 
         bg-[--clr-blue-light] rounded-2xl px-4 py-1 text-center font-medium text-base'>
-            Submit a Program to Sprig <Icon icon="ArrowTopRight" size="sm" className="fill-[--clr-blue-dark]"/>
+            Submit a Program to Sedge <Icon icon="ArrowTopRight" size="sm" className="fill-[--clr-blue-dark]"/>
         </span>
 
         <div className='flex flex-col items-center gap-3'>
