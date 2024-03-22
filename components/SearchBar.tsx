@@ -17,12 +17,14 @@ export default function SearchBar() {
     }
 
     return (
-        <div className='w-full relative'>
+        <div className='w-full flex flex-row items-center justify-between relative'>
             
-            <span className='flex flex-row items-center gap-4 bg-[--clr-grey-light] px-6 border-2 border-[--clr-base-accent] rounded-3xl'>
-                <input onChange={(e) => setSearchQuery(e.target.value)} className='w-full py-1 focus:outline-none border-none bg-transparent text-sm placeholder:text-sm placeholder:text-[--clr-grey-dark] placeholder:font-medium' type='text' placeholder={`Search 'internships'`}/>
-                <Icon icon="Search" button={true}/>
+            <span className='w-full flex flex-row items-center px-2 py-1 gap-4 px-6 border-[3px] border-[--clr-base-accent] rounded-full shadow-sm'>
+                <input onChange={(e) => setSearchQuery(e.target.value)} className='w-full py-1 focus:outline-none border-none bg-transparent text-base placeholder:text-base placeholder:text-[--clr-grey-dark] placeholder:font-medium' type='text' placeholder={`Search`}/>
+                <Icon icon="Search" button={true} />
             </span>
+
+            
 
             {/*SEARCH RESULTS MODAL*/}
             {searchResults.length != 0 && 
@@ -30,7 +32,7 @@ export default function SearchBar() {
                 {searchResults.map((item,index)=> (
                     <Link key={index} href={`/explore/o/1`} className=' relative flex flex-row w-full border-b border-[--clr-grey-light] py-1'> 
                         <span className='ml-2'>{item}</span>
-                        <Icon icon='Search' size='sm' button={true} className='absolute right-2'/>
+                        <Icon icon='Search' size='sm' button={true} className='fill-[--clr-grey-dark] absolute right-2'/>
                     </Link>
                 ))}
             </div>}

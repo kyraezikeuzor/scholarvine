@@ -34,13 +34,13 @@ const Checkbox = ({children, onCheckOn, onCheckOff,rounded}: CheckboxProps) => {
             !rounded ?
             <div onClick={() => setClick(!click)} className='flex flex-row gap-2 items-center px-1 cursor-pointer hover:bg-[--clr-grey-light]'>
               <div className={`h-3 w-3 rounded-sm flex flex-col items-center ${click ? 'bg-[--clr-base-text]' : 'border border-[--clr-grey-base]'}`}>
-                  <Icon icon="Check" color="white"/>
+                  <Icon icon="Check" className={`${click ? 'fill-[--clr-base]':'fill-[--clr-base-text]'}`}/>
               </div>
               <span className='text-sm'>{children}</span>
             </div>
           :
             <div onClick={() => setClick(!click)} className={`flex flex-row items-center gap-1 text-sm font-medium rounded-2xl px-3 py-[2px] 
-            border-[3px] border-[--clr-base-accent] cursor-pointer ${click ? 'border-none bg-[--clr-blue-light] text-[--clr-blue-dark]' : ''} `}>
+            border-[3px] border-[--clr-base-accent] cursor-pointer ${click ? 'border-[--clr-blue-light] bg-[--clr-blue-light] text-[--clr-blue-dark]' : ''} `}>
               <span>
                 {click ? '-' :  '+'}
               </span>

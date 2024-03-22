@@ -57,9 +57,9 @@ const Navbar = () => {
     
     
     return (
-        <nav className={`${showNavbar == true ? 'flex' : 'hidden'} z-50 sticky top-0 flex-col items-center backdrop-blur bg-[--clr-base]/50 border-b-2 border-[--clr-base-accent] shadow-sm`}> 
+        <nav className={`${showNavbar == true ? 'flex' : 'hidden'} z-50 sticky top-0 flex-col items-center backdrop-blur bg-[--clr-base]/50 `}> 
             
-            <section className='flex flex-row items-center justify-between gap-5 w-full py-[2vh] px-[3vw]'>
+            <section className='flex flex-row items-center justify-between gap-5 w-full py-[1.5vh] px-[3vw]'>
 
                 <ul className='w-1/2 flex flex-row items-center gap-16 '>
                     <Logo/>
@@ -82,7 +82,7 @@ const Navbar = () => {
                 <ul className='w-1/2  flex flex-row items-center justify-end gap-8 '>
                     
                     {/*SEARCH BAR*/}
-                    <li className='w-full relative '>
+                    <li className='hidden w-full relative '>
                         <span className='flex flex-row items-center gap-4 bg-[--clr-grey-light] px-6 border-2 border-[--clr-base-accent] rounded-3xl'>
                             <input onChange={(e) => setSearchQuery(e.target.value)} className='w-full py-1 focus:outline-none border-none bg-transparent text-sm placeholder:text-sm placeholder:text-[--clr-grey-dark] placeholder:font-medium' type='text' placeholder={`Search 'internships'`}/>
                             <Icon icon="Search" button={true}/>

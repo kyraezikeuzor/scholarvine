@@ -47,6 +47,17 @@ const Opportunity = ({Id,UserId,Name,Company,Description,Type,Location,Applicati
     },[USERS])
 
 
+    useEffect(()=>{
+        const data = window.localStorage.getItem('SEDGE_APP_OPPORTUNITY_SAVED');
+        if (data != null) setSave(JSON.parse(data))
+    },[])
+
+
+    useEffect(()=>{
+        window.localStorage.setItem('SEDGE_APP_OPPORTUNITY_SAVED', JSON.stringify(save))
+    }, [save])
+
+
     return (
         <div className='relative flex flex-row gap-2 items-center px-4 py-4 border-[3px] border-[--clr-base-accent] rounded-xl bg-[--clr-base]'>
                             

@@ -1,9 +1,10 @@
 .button {
-    padding:.4rem 1rem;
-    background-color:var(--clr-blue-dark);
-    border-radius: 18px;
-    color: white;
-    white-space: nowrap
+    padding:.6rem 1.2rem;
+    background-color:var(--clr-blue-extradark);
+    border-radius: 20px;
+    color: var(--clr-base);
+    white-space: nowrap;
+    font-weight:600;
 }
 
 .outline {

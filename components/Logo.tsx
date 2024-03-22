@@ -12,8 +12,8 @@ const Logo = ({minimal, size, className}: LogoProps) => {
 
     return (
         <Link href="/" className={`${className} flex flex-row items-center gap-2`}>
-            <img className={size ? size === 'lg' ? 'w-12' : size === 'xl' ? 'w-14': 'w-8' : 'w-8'} src='/logo-blue.png'/>
-            {!minimal && <span className='hidden lg:block font-semibold text-sm md:text-lg lg:text-2xl'>Sedge</span>}
+            <img className={size ? size === 'lg' ? 'w-12' : size === 'xl' ? 'w-14': 'w-8' : 'w-8'} src='/app-logo-2.png'/>
+            {!minimal && <span className='hidden lg:block font-semibold text-base md:text-lg lg:text-xl'>Sprig</span>}
         </Link>
     )
 }

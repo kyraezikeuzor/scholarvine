@@ -1,5 +1,5 @@
 .main {
-    padding: 1vh 3vw;
+    padding: 1vh 8vw;
     display:grid;
     grid-template-columns: 6fr 2fr;
     gap:30px;

@@ -3,20 +3,21 @@
 @tailwind utilities;
 
 :root {
-    --clr-base: #fdfdfd;
+    --clr-base: #fcfcfc;
     --clr-base-accent:rgb(243, 243, 243);
     --clr-base-default: white;
     --clr-base-text: #353232;
 
     --clr-pink-base: #f6d8f7;
-    --clr-pink-light: rgb(255, 242, 247) ;
+    --clr-pink-light: rgb(255, 233, 242) ;
     --clr-pink-dark: rgb(194, 51, 125);
 
     --clr-purple-light: rgb(246, 229, 246);
 
     --clr-blue-base: #6182FF;
     --clr-blue-light: #F0F7FF;
-    --clr-blue-dark: #347CCB;
+    --clr-blue-dark: #4898de; /*347CCB*/
+    --clr-blue-extradark: #090c21;
 
     --clr-grey-light: #f8f8f8;
     --clr-grey-base: rgb(218, 218, 218);
@@ -61,6 +62,7 @@
   --clr-blue-base: #6182FF;
   --clr-blue-light: #e9f1fa1a;
   --clr-blue-dark: #4898de;
+  --clr-blue-extradark: #A2B2F9;
   
   --clr-grey-light: rgba(63, 59, 59, 0.39);
   --clr-grey-base: rgba(204, 202, 202, 0.671);

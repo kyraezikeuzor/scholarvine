@@ -21,31 +21,24 @@ export default function Home() {
 
 
   return (
-    <main className="flex flex-col items-center gap-5 py-[5vh] ">
+    <main className="flex flex-col items-center gap-5 py-[2vh] ">
 
-      <header className='py-[2vh] px-[5vw] flex flex-col gap-2 items-center'>
+      <header className='w-full px-5 md:px-[10vw] py-[2vh] flex flex-col items-center gap-5'>
 
-        <span className='w-fit border border-[--clr-blue-light] text-[--clr-blue-dark] 
-        bg-[--clr-blue-light] rounded-2xl px-4 py-1 text-center font-medium text-base'>
-            Submit a Program to Sedge <Icon icon="ArrowTopRight" size="sm" className="fill-[--clr-blue-dark]"/>
-        </span>
-
-        <div className='flex flex-col items-center gap-3'>
-          <h1 className='text-center text-6xl md:text-7xl lg:text-[92px] tracking-tighter'>
-            Explore Sedge
+        <div className='flex flex-col items-center gap-2 '>
+          <span className='text-sm md:text-base text-[--clr-grey-dark] font-semibold rounded-3xl px-4 py-1'>
+            Solving Food Waste One Meal At a Time
+          </span>
+          <h1 className='text-center text-5xl md:text-6xl lg:text-[75px] tracking-tight font-bold'>
+          Tired of themes that <br className='hidden md:inline'/> don’t feel right?  <span className=''></span>
           </h1>
-          <p className='text-center text-lg md:text-xl text-[--clr-grey-dark]'>
-            Sedge provides a database of 100s of opportunities
+          <p className=' text-sm md:text-lg text-[--clr-grey-dark]'>
+            EcoEats is a revolutionary app that connects charities with food.
           </p>
         </div>
 
-        <div className='flex flex-col md:flex-row gap-3 w-full md:w-3/5 items-center justify-center'>
-          <div className='w-full md:w-5/6 '>
-            <SearchBar/>
-          </div>
-          <div className='w-full md:w-fit '>
-            <Button path='/explore'>Get Started</Button>
-          </div>
+        <div className='flex items-center w-full lg:w-2/5 justify-center'>
+          <SearchBar/>
         </div>
 
       </header>

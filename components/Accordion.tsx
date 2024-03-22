@@ -15,6 +15,16 @@ const Accordion = ({head, body}:AccordionProps) => {
         setClick(!click)
     }
 
+    useEffect(()=>{
+        const data = window.localStorage.getItem('SEDGE_APP_ACCORDION');
+        if (data != null) setClick(JSON.parse(data))
+    },[])
+
+
+    useEffect(()=>{
+        window.localStorage.setItem('SEDGE_APP_ACCORDION', JSON.stringify(click))
+    }, [click])
+
     return (
 
         <div className='bg-[--clr-base] rounded-xl border-[3px] px-[10px] py-2 border-[--clr-base-accent]'>

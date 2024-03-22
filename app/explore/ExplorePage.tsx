@@ -220,7 +220,7 @@ const ExplorePage = () => {
                 </div>
 
 
-                {/*DESKTOP & MOBILE OPPORTUNITY TYPE SELECTION*/}
+                {/*DESKTOP & MOBILE OPPORTUNITY TYPE CHECKBOX SELECTORS*/}
                 <div className='flex flex-row justify-between'>
                     <div className='flex flex-row flex-wrap items-center gap-2'>
                         {OPPORTUNITY_TYPES.map((item,index)=>(
