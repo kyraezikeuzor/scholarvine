@@ -174,7 +174,7 @@ const ExplorePage = () => {
     }
 
     return (
-        <main className={styles.main} onClick={handleClearFilterModals}>
+        <section className={styles.main} onClick={handleClearFilterModals}>
 
             {/*TYPE SELECTION & DATABASE*/}
             <section className='flex flex-col gap-5'>
@@ -182,7 +182,7 @@ const ExplorePage = () => {
                 {/*MOBILE FILTER NAVBAR*/}
                 <div className='flex flex-row items-center gap-1 md:hidden 
                 sticky top-[16vh] right-0 left-0 md:relative md:top-0
-                py-2 px-2 z-40 shadow-sm backdrop-blur bg-[--clr-base]/50 md:shadow-none '>
+                py-2 z-40 shadow-sm backdrop-blur bg-[--clr-base]/50 md:shadow-none '>
 
                     {subfilters?.map((item,index)=>(
                         <div key={index} className='relative'>
@@ -221,8 +221,8 @@ const ExplorePage = () => {
 
 
                 {/*DESKTOP & MOBILE OPPORTUNITY TYPE CHECKBOX SELECTORS*/}
-                <div className='flex flex-row justify-between'>
-                    <div className='flex flex-row flex-wrap items-center gap-2'>
+                <div className='flex flex-col md:flex-row gap-2 justify-between'>
+                    <div className='flex flex-row flex-wrap items-center gap-2 '>
                         {OPPORTUNITY_TYPES.map((item,index)=>(
                             <Checkbox key={index} rounded 
                             onCheckOn={()=> handleAddItem(item,'Types')}
@@ -233,7 +233,7 @@ const ExplorePage = () => {
                         ))}
                     </div>
 
-                    <div className='mt-[24vh] md:mt-0 text-sm text-right font-medium'>
+                    <div className='md:mt-0 text-sm text-right font-medium'>
                         {pageOpps.length} {`Search Result${pageOpps.length != 1 ? 's' : ''}`}
                     </div>
                 </div>
@@ -263,7 +263,7 @@ const ExplorePage = () => {
             </section>
 
             {/*FILTER*/}
-            <section className='hidden md:flex sticky flex-col gap-3 w-full max-h-[80vh] top-[16vh] right-[3vw] px-5 overflow-y-auto'>
+            <section className='hidden md:flex sticky flex-col gap-3 w-full max-h-[80vh] top-[16vh] right-[3vw] overflow-y-auto'>
 
                 <div className='flex flex-col gap-1'>
                     <h2 className='text-sm md:text-base'>Categories</h2>
@@ -328,7 +328,7 @@ const ExplorePage = () => {
                 </div>
 
             </section>
-    </main>
+    </section>
     )
 }
 

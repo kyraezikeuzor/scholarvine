@@ -82,7 +82,7 @@ const Opportunity = ({Id,UserId,Name,Company,Description,Type,Location,Applicati
                         </Link> 
                         
                     </h2> 
-                    <span className='flex flex-row gap-1 items-center'>
+                    <span className='hidden flex flex-row gap-1 items-center'>
                         <img className='w-4 h-4 rounded-full' src={user?.Picture}/>
                         <span className='cursor-pointer text-xs font-medium hover:text-[--clr-grey-base]'>
                             Posted by <Link href={`/explore/u/${user?.Username}`}><b>@{user?.Username}</b></Link>

@@ -21,7 +21,7 @@ export default function SearchBar() {
             
             <span className='w-full flex flex-row items-center px-2 py-1 gap-4 px-6 border-[3px] border-[--clr-base-accent] rounded-full shadow-sm'>
                 <input onChange={(e) => setSearchQuery(e.target.value)} className='w-full py-1 focus:outline-none border-none bg-transparent text-base placeholder:text-base placeholder:text-[--clr-grey-dark] placeholder:font-medium' type='text' placeholder={`Search`}/>
-                <Icon icon="Search" button={true} />
+                <Icon icon="Search" button={true} className='fill-[--clr-grey-base]' />
             </span>
 
             

@@ -5,10 +5,12 @@
     color: var(--clr-base);
     white-space: nowrap;
     font-weight:600;
+    fill: var(--clr-base);
 }
 
 .outline {
-    background-color: transparent;
-    border:1px solid var(--clr-grey-base);
+    background-color: var(--clr-grey-light);
+    border:1px solid var(--clr-grey-light);
     color: var(--clr-grey-dark);
+    fill:var(--clr-grey-dark);
 }

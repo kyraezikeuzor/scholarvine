@@ -21,31 +21,39 @@ export default function Home() {
 
 
   return (
-    <main className="flex flex-col items-center gap-5 py-[2vh] ">
+    <main className="flex flex-col items-center gap-5 mx-5 md:mx-[6vw] ">
 
-      <header className='w-full px-5 md:px-[10vw] py-[2vh] flex flex-col items-center gap-5'>
-
-        <div className='flex flex-col items-center gap-2 '>
-          <span className='text-sm md:text-base text-[--clr-grey-dark] font-semibold rounded-3xl px-4 py-1'>
+      <header className='w-full py-[2vh] flex flex-col  items-center gap-5'>
+        <div className='flex flex-col items-center gap-3 '>
+          <span className='text-sm md:text-base shadow-sm bg-[--clr-grey-light] text-[--clr-grey-dark] font-semibold rounded-3xl px-4 py-1'>
             Solving Food Waste One Meal At a Time
           </span>
-          <h1 className='text-center text-5xl md:text-6xl lg:text-[75px] tracking-tight font-bold'>
-          Tired of themes that <br className='hidden md:inline'/> don’t feel right?  <span className=''></span>
+          <h1 className='text-center mt-[1vh] text-5xl md:text-6xl lg:text-[65px] tracking-tight font-bold'>
+          Tired of themes that  don’t feel right?  <span className=''></span>
           </h1>
-          <p className=' text-sm md:text-lg text-[--clr-grey-dark]'>
-            EcoEats is a revolutionary app that connects charities with food.
+          <p className='text-center text-sm md:text-lg text-[--clr-grey-dark]'>
+            Being organized is just one click away. Discover how to supercharge your productivity today. 🌱
           </p>
         </div>
 
-        <div className='flex items-center w-full lg:w-2/5 justify-center'>
-          <SearchBar/>
+        <div className='flex flex-row gap-3 items-center'>
+          <Button path='/explore'>
+            Get Started 
+          </Button>
+          <Button path='' outline>
+              Browse resources
+          </Button>
         </div>
-
       </header>
 
-      
-      <ExplorePage/>
-      
+      <section className="flex flex-col items-center gap-5 py-[2vh]">
+          <div className='w-full flex flex-row items-center justify-center gap-5 '>
+              <div className='w-full lg:w-1/2'>
+                  <SearchBar/>
+              </div>
+          </div>
+          <ExplorePage/>
+      </section>
       
     </main>
   )

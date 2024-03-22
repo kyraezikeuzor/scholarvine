@@ -1,5 +1,5 @@
 .main {
-    padding: 1vh 8vw;
+    padding: 2vh 0vw;
     display:grid;
     grid-template-columns: 6fr 2fr;
     gap:30px;
@@ -11,7 +11,7 @@
 
 @media screen and (max-width: 768px) {
     .main {
-        padding: 1vh 1.25rem;
+        padding: 1vh 0rem;
         display:flex;
         flex-direction:column;
     }
