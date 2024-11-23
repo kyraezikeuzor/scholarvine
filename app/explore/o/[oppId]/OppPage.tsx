@@ -43,7 +43,7 @@ const OppPage = ({params}:PageProps) => {
     
 
     return (
-        <main className='md:px-[15vw] py-[10vh] flex flex-col'> 
+        <main className='md:px-[15vw] py-[10vh] flex flex-col gap-2'> 
             <h1 className='text-3xl md:text-4xl lg:text-5xl'>{opp?.Name}</h1>
             <div className='flex flex-row gap-1 items-center'>
                 <img className='w-4 h-4 rounded-full' src={user?.Picture}/>
@@ -53,12 +53,14 @@ const OppPage = ({params}:PageProps) => {
             </div>
             <div className='flex flex-row gap-1'>
                 <div className='flex flex-row gap-1'>
-                    <span>{opp?.Company}</span>
-                    <span>{opp?.Location}</span>
+                    <span className='inline-block text-[11px] font-medium border border-[--clr-base-accent] px-[8px] py-[1px] rounded-xl bg-transparent'>{opp?.Company}</span>
+                    <span className='inline-block text-[11px] font-medium border border-[--clr-base-accent] px-[8px] py-[1px] rounded-xl bg-transparent'>{opp?.Location}</span>
                 </div>
                 <span className='flex flex-row gap-1'>
                     {opp?.Tags.map((item,index)=>(
-                        <span key={index}>{item}</span>
+                        <span key={index} className='inline-block text-[11px] font-medium border border-[--clr-base-accent] px-[8px] py-[1px] rounded-xl bg-transparent'>
+                            {item}
+                        </span>
                     ))}
                 </span>
             </div>

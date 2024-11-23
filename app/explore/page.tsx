@@ -5,7 +5,7 @@ import SearchBar from '@/components/SearchBar'
 export default function Explore(){
 
     return (
-        <main className="flex flex-col items-center gap-5 py-[2vh] ">
+        <main className="w-full flex flex-col items-center gap-5 py-[2vh] mx-5 md:mx-[6vw] ">
             <header className='px-[3vw] w-full flex flex-row items-center justify-center gap-5 '>
                 <h1 className='font-bold tracking-tight text-2xl'> </h1>
                 
@@ -14,7 +14,7 @@ export default function Explore(){
                 </div>
                 
             </header>
-            
+
             <ExplorePage/>
         </main>
     )

@@ -48,13 +48,13 @@ const Opportunity = ({Id,UserId,Name,Company,Description,Type,Location,Applicati
 
 
     useEffect(()=>{
-        const data = window.localStorage.getItem('SEDGE_APP_OPPORTUNITY_SAVED');
+        const data = window.localStorage.getItem(`SCHOLARVINE_SAVED_OPPORTUNITY_${Id}`);
         if (data != null) setSave(JSON.parse(data))
     },[])
 
 
     useEffect(()=>{
-        window.localStorage.setItem('SEDGE_APP_OPPORTUNITY_SAVED', JSON.stringify(save))
+        window.localStorage.setItem(`SCHOLARVINE_SAVED_OPPORTUNITY_${Id}`, JSON.stringify(save))
     }, [save])
 
 

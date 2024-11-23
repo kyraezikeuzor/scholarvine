@@ -21,22 +21,23 @@ export default function Home() {
 
 
   return (
-    <main className="flex flex-col items-center gap-5 mx-5 md:mx-[6vw] ">
+    <main className="flex flex-col items-center gap-3 mx-5 py-[5vh] md:mx-[5vw] ">
 
-      <header className='w-full py-[2vh] flex flex-col  items-center gap-5'>
-        <div className='flex flex-col items-center gap-3 '>
-          <span className='text-sm md:text-base shadow-sm bg-[--clr-grey-light] text-[--clr-grey-dark] font-semibold rounded-3xl px-4 py-1'>
+      <header className=' w-full py-[2vh] flex flex-col items-center gap-5'>
+
+        <div className='flex flex-col items-center gap-3'>
+          <span className='hidden text-sm md:text-base shadow-sm bg-[--clr-grey-light] text-[--clr-grey-dark] font-semibold rounded-3xl px-4 py-1'>
             Solving Food Waste One Meal At a Time
           </span>
-          <h1 className='text-center mt-[1vh] text-5xl md:text-6xl lg:text-[65px] tracking-tight font-bold'>
-          Tired of themes that  don’t feel right?  <span className=''></span>
+          <h1 className='text-center mt-[1vh] text-4xl md:text-6xl lg:text-5xl tracking-tight font-semibold'>
+          Supercharge your activity list <span className=''></span>
           </h1>
           <p className='text-center text-sm md:text-lg text-[--clr-grey-dark]'>
-            Being organized is just one click away. Discover how to supercharge your productivity today. 🌱
+            Finding a new opportunity is one click away. Discover 100+ activities and programs today.
           </p>
         </div>
 
-        <div className='flex flex-row gap-3 items-center'>
+        <div className='hidden flex flex-row gap-3 items-center'>
           <Button path='/explore'>
             Get Started 
           </Button>
@@ -44,14 +45,16 @@ export default function Home() {
               Browse resources
           </Button>
         </div>
+
+        <div className='w-full flex flex-row items-center justify-center gap-5 '>
+          <div className='w-full lg:w-1/2'>
+              <SearchBar/>
+          </div>
+        </div>
       </header>
 
-      <section className="flex flex-col items-center gap-5 py-[2vh]">
-          <div className='w-full flex flex-row items-center justify-center gap-5 '>
-              <div className='w-full lg:w-1/2'>
-                  <SearchBar/>
-              </div>
-          </div>
+      <section className="w-full flex flex-col items-center gap-5 py-[2vh]">
+          
           <ExplorePage/>
       </section>
       

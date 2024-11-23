@@ -15,15 +15,15 @@
     {
         "Id":1,
         "UserId":1,
-        "Name": "Welch Foundation Summer Scholars Program",
+        "Name": "Adroit Summer Mentorship Program",
         "Company": "CEE",
         "Description": "Apple is offering Software Engineering Internships for engineering students with a strong background in Back-End Engineering, Core OS, and Web Development. The internship provides an opportunity to work on groundbreaking projects such as Siri, iCloud, Apple Maps, Core OS, macOS, and more.",
         "Type": "Program",
-        "Location": ["Texas"],
+        "Location": ["Kansas","Indiana"],
         "ApplicationDeadline": null,
         "EducationLevel": ["Undergraduate"],
         "GradeLevel": [9,10,11],
-        "Tags": ["Medicine","Biology"]
+        "Tags": ["MediciKane","Biology"]
     },
     {
         "Id":2,
