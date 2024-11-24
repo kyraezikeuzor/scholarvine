@@ -46,7 +46,7 @@ export default function SubmitProgramPage() {
             <div className='flex flex-col md:grid md:grid-cols-2 lg:md:grid-cols-3 4xl:grid-cols-6 gap-3'>
                 {savedOpportunities.map((item,index)=>(
                     <OpportunityComponent
-                    key={index}
+                        key={index}
                         Id={item.Id}
                         UserId={item.UserId}
                         Name={item.Name}

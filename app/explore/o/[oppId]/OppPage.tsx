@@ -43,8 +43,8 @@ const OppPage = ({params}:PageProps) => {
     
 
     return (
-        <main className='md:px-[15vw] py-[10vh] flex flex-col gap-2'> 
-            <h1 className='text-3xl md:text-4xl lg:text-5xl'>{opp?.Name}</h1>
+        <main className='md:px-[15vw] py-[10vh] flex flex-col gap-2 '> 
+            <h1 className='text-2xl md:text-3xl lg:text-4xl'>{opp?.Name}</h1>
             <div className='flex flex-row gap-1 items-center'>
                 <img className='w-4 h-4 rounded-full' src={user?.Picture}/>
                 <span className='text-xs font-medium hover:text-[--clr-grey-base]'>

@@ -74,7 +74,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link href='/learn-more' className={`flex flex-row gap-2 ${pathname === '/learn-more' ? 'text-[--clr-blue-base]' : ''}`}>
-                                <Icon icon='Location' size='sm' className={pathname === '/explore' ? 'fill-[--clr-blue-base]' : ''} />
+                                <Icon icon='Location' size='sm' className={pathname === '/learn-more' ? 'fill-[--clr-blue-base]' : ''} />
                                 Learn More
                             </Link>
                         </li>
@@ -82,7 +82,6 @@ const Navbar = () => {
                 </ul>
 
                 <ul className='w-1/3 hidden md:flex flex-row items-center justify-end gap-8 '>
-
                     <ul className='flex flex-row gap-2 items-center'>
                         <li>
                             <Button path='/create' >
@@ -93,7 +92,6 @@ const Navbar = () => {
                             <Theme/>
                         </li>
                     </ul>
-                    
                 </ul>
                 
 
