@@ -8,7 +8,7 @@
 - **User-Friendly Interface**: Access opportunities through an intuitive and visually engaging platform.  
 
 ## Usage  
-To start exploring, visit **[ScholarVine]([https://scholarvine.vercel.app/])** and browse opportunities tailored to your academic journey.  
+To start exploring, visit **[ScholarVine](https://scholarvine.vercel.app/)** and browse opportunities tailored to your academic journey.  
 
 
 ## Installation (For Developers)  
