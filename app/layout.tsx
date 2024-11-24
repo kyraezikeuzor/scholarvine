@@ -9,7 +9,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'ScholarVine | Search 100s of opportunities',
-  description: 'Use ScholarVine to search for hundreds of activities and opportunities.',
+  description: 'Use ScholarVine to search for dozens of activities and opportunities.',
 }
 
 export default function RootLayout({
@@ -19,6 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta property="og:image" content="https://drive.google.com/file/d/1LwzacBFnb3-avwlLr68U-LgLZ-7-hnM9/view?usp=sharing"/>
+      </head>
       <body className={inter.className}>
         <Navbar/>
         {children}
