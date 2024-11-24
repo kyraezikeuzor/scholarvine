@@ -8,7 +8,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'ScholarVine | Search 100s of opportunities',
+  title: 'ScholarVine | Search dozens of prestigious opportunities',
   description: 'Use ScholarVine to search for dozens of activities and opportunities.',
 }
 

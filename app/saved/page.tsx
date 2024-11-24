@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 import SavedOpportunities from '@/components/SavedOpportunities'
 
 export const metadata: Metadata = {
-    title: 'Submit to ScholarVine | Search 100s of opportunities',
-    description: 'Use ScholarVine to search for hundreds of activities and opportunities.',
+    title: 'Submit to ScholarVine | Search dozens of opportunities',
+    description: 'Use ScholarVine to search for dozens of activities and opportunities.',
   }
   
 
