@@ -1,4 +1,4 @@
-# ScholarVine: Academic Opportunity Search Tool  
+# <img src="public/logo.png" alt="Logo" width="30"> ScholarVine: Academic Opportunity Search Tool  
 
 **ScholarVine** is your hub for discovering academic opportunities tailored to your interests and goals. Simplifying the search for scholarships, internships, research, and other educational programs.
 
