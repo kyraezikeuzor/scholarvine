@@ -16,7 +16,7 @@ export default function LearnMorePage() {
                     </h1>
                     <p className="mt-4 text-sm md:text-lg leading-relaxed">
                         ScholarVine is a platform designed to connect students with hundreds of curated 
-                        opportunities, from scholarships to extracurricular activities. Whether you're exploring 
+                        opportunities, from scholarships to extracurricular activities. Whether you&apos;re exploring 
                         ways to enhance your resume, apply for financial aid, or find programs that align with 
                         your passions, ScholarVine is here to make the process simple and efficient.
                     </p>
@@ -31,7 +31,7 @@ export default function LearnMorePage() {
                         tailored to your goals and interests.
                     </li>
                     <li>
-                        <strong>Save and Track Your Favorites:</strong> Bookmark opportunities you’re interested in and 
+                        <strong>Save and Track Your Favorites:</strong> Bookmark opportunities you&apos;re interested in and 
                         easily access them whenever you need.
                     </li>
                     <li>
