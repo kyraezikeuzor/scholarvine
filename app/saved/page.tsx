@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function SubmitProgramPage() {
 
     return (
-        <main className='px-[5vw] py-[8vh]'>
+        <main className='py-[2vh] mx-5 md:mx-[6vw] lg:my-[10vh]'>
             <header className='flex flex-col gap-2'>
                 <div className='flex flex-col items-center gap-3'>
                     <h1 className='text-center mt-[1vh] text-4xl md:text-6xl lg:text-5xl tracking-tight font-semibold'>

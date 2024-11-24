@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function LearnMorePage() {
     return (
-        <main className="px-[10vw] py-[8vh]">
+        <main className="py-[2vh] mx-5 md:mx-[12vw] lg:my-[10vh]">
             <header className="flex flex-col gap-6">
                 <div>
                     <h1 className="mt-[1vh] text-3xl md:text-4xl lg:text-5xl tracking-tight font-semibold">
