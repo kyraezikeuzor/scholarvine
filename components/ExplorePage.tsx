@@ -160,14 +160,39 @@ const ExplorePage = () => {
     },[filter])
 
     const [openMobileSubfilter, setOpenMobileSubfilter] = useState(false)
-    const [mobileSubfilterIndex, setMobileSubfilterIndex] = useState<number | null>(null)
+    const [mobileSubfilterIndex, setMobileSubfilterIndex] = useState<number>(-1);  // -1 means no subfilter is open
     const [mobileSubfilterName, setMobileSubfilterName] = useState('')
+    const [mobileSubfilter, setMobileSubfilter] = useState<any>()
 
-    const handleMobileSubfilter = (index:number) => {
-        setOpenMobileSubfilter(!openMobileSubfilter)
-        setMobileSubfilterIndex(index)
-        setMobileSubfilterName(filter[index].name)
+    const handleMobileSubfilter = (index: number) => {
+        // If the clicked subfilter is already open, close it
+        if (mobileSubfilterIndex === index) {
+            setMobileSubfilterIndex(-1);  // Close the filter
+        } else {
+            setMobileSubfilterIndex(index);  // Open the selected filter
+        }
+        setMobileSubfilterName(filter[index].name);
     }
+    
+    useEffect(()=>{
+
+        if (mobileSubfilterIndex === 0) {
+            setMobileSubfilter(OPPORTUNITY_TYPES)
+        }
+
+        if (mobileSubfilterIndex === 0) {
+            setMobileSubfilter(OPPORTUNITY_CATEGORIES_GROUPED)
+        }
+
+        if (mobileSubfilterIndex === 0) {
+            setMobileSubfilter(OPPORTUNITY_EDUCATION_LEVELS)
+        }
+
+        if (mobileSubfilterIndex === 0) {
+            setMobileSubfilter(OPPORTUNITY_LOCATIONS_GROUPED)
+        }
+
+    }, [mobileSubfilterName, mobileSubfilterIndex])
 
     const handleClearFilterModals = () => {
         
@@ -179,50 +204,73 @@ const ExplorePage = () => {
             {/*TYPE SELECTION & DATABASE*/}
             <section className='w-full sticky flex flex-col gap-5'>
 
-                {/*MOBILE FILTER NAVBAR*/}
-                <div className='flex flex-wrap items-center gap-1 md:hidden 
-                sticky top-[16vh] right-0 left-0 md:relative md:top-0
-                py-2 z-40 shadow-sm backdrop-blur bg-[--clr-base]/50 md:shadow-none '>
-
-                    {subfilters?.map((item,index)=>(
+                {/* MOBILE FILTER NAVBAR */}
+                <div className='flex flex-wrap items-center gap-1 md:hidden sticky top-[16vh] right-0 left-0 md:relative md:top-0 py-2 z-40 shadow-sm backdrop-blur bg-[--clr-base]/50 md:shadow-none '>
+                    {subfilters?.map((item, index) => (
                         <div key={index} className='relative'>
-                            <span className='flex flex-row gap-1 items-center text-sm font-medium 
-                            rounded-2xl border border-[--clr-grey-base] px-3 py-[2px]'
-                            onClick={()=>handleMobileSubfilter(index)}>
+                            <span className='flex flex-row gap-1 items-center text-sm font-medium rounded-2xl border border-[--clr-grey-base] px-3 py-[2px]'
+                                onClick={() => handleMobileSubfilter(index)}>
                                 <span>{item}</span>
                                 <Icon icon="ChevronBottom" size="sm"/>
-                            </span >
-                            {openMobileSubfilter && mobileSubfilterIndex==index && 
-                            <div className='fixed flex flex-col gap-1  z-50'>
+                            </span>
 
-                                {OPPORTUNITY_CATEGORIES_GROUPED.map((item,index)=>(
-                                    <Accordion key={index}
-                                        head=
-                                        {<div className='text-sm font-medium flex flex-row relative cursor-pointer'>
-                                            {item.name}
-                                        </div>}
-                                        body=
-                                        {<div className='ml-2'>
-                                            {item.list.map((item,index)=>(
-                                                <Checkbox key={index}
-                                                onCheckOn={() => handleAddItem(item,mobileSubfilterName)} 
-                                                onCheckOff={() => handleRemoveItem(item, mobileSubfilterName)}>
-                                                    {item}
-                                                </Checkbox>
-                                            ))}
-                                        </div>}
-                                    />                    
-                                ))}
+                            {/* Only show the subfilter content for the selected filter */}
+                            {mobileSubfilterIndex === index && (
+                                <div className='fixed flex flex-col gap-1 z-50 rounded-md p-2 bg-[--clr-base] border border-[--clr-grey-base]'>
+                                    {index === 0 && OPPORTUNITY_TYPES.map((item, idx) => (
+                                        <Checkbox key={idx} rounded
+                                            onCheckOn={() => handleAddItem(item, 'Types')}
+                                            onCheckOff={() => handleRemoveItem(item, 'Types')}>
+                                            {item}
+                                        </Checkbox>
+                                    ))}
 
-                            </div>}
+                                    {index === 1 && OPPORTUNITY_CATEGORIES_GROUPED.map((item, idx) => (
+                                        <Accordion key={idx}
+                                            head={<div className='text-sm font-medium flex flex-row relative cursor-pointer'>{item.name}</div>}
+                                            body={<div className='ml-2'>
+                                                {item.list.map((subItem, subIdx) => (
+                                                    <Checkbox key={subIdx}
+                                                        onCheckOn={() => handleAddItem(subItem, mobileSubfilterName)}
+                                                        onCheckOff={() => handleRemoveItem(subItem, mobileSubfilterName)}>
+                                                        {subItem}
+                                                    </Checkbox>
+                                                ))}
+                                            </div>} 
+                                        />
+                                    ))}
+
+                                    {index === 2 && OPPORTUNITY_EDUCATION_LEVELS.map((item, idx) => (
+                                        <Checkbox key={idx}
+                                            onCheckOn={() => handleAddItem(item, "Education")}
+                                            onCheckOff={() => handleRemoveItem(item, "Education")}>
+                                            {item}
+                                        </Checkbox>
+                                    ))}
+
+                                    {index === 3 && OPPORTUNITY_LOCATIONS_GROUPED.map((item, idx) => (
+                                        <Accordion key={idx}
+                                            head={<div className='text-sm font-medium flex flex-row relative cursor-pointer'>{item.name}</div>}
+                                            body={<div className='ml-2'>
+                                                {item.list.map((subItem, subIdx) => (
+                                                    <Checkbox key={subIdx}
+                                                        onCheckOn={() => handleAddItem(subItem, "Locations")}
+                                                        onCheckOff={() => handleRemoveItem(subItem, "Locations")}>
+                                                        {subItem}
+                                                    </Checkbox>
+                                                ))}
+                                            </div>} 
+                                        />
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>
 
-
                 {/*DESKTOP & MOBILE OPPORTUNITY TYPE CHECKBOX SELECTORS*/}
-                <div className='flex flex-col md:flex-row gap-2 justify-between'>
-                    <div className='flex flex-wrap w-fit  items-center gap-2 '>
+                <div className='hidden md:flex flex-col md:flex-row gap-2 justify-between'>
+                    <div className='flex flex-wrap w-fit items-center gap-2 '>
                         {OPPORTUNITY_TYPES.map((item,index)=>(
                             <Checkbox key={index} rounded 
                             onCheckOn={()=> handleAddItem(item,'Types')}
@@ -241,7 +289,6 @@ const ExplorePage = () => {
 
                 {/*DATABASE*/}
                 <section className='flex flex-col md:grid md:grid-cols-2 lg:md:grid-cols-3 4xl:grid-cols-6 gap-3'>
-
                     {/*OPPORTUNITY*/}
                     {pageOpps.map((item,index)=>(
                         <OpportunityComponent key={index}
