@@ -84,8 +84,8 @@ const Navbar = () => {
                 <ul className='w-1/3 hidden md:flex flex-row items-center justify-end gap-8 '>
                     <ul className='flex flex-row gap-2 items-center'>
                         <li>
-                            <Button path='/create' >
-                                Create <Icon icon="ArrowTopRight" className="fill-inherit" size="sm"/>
+                            <Button path='/submit' >
+                                Submit a Program <Icon icon="ArrowTopRight" className="fill-inherit" size="sm"/>
                             </Button>
                         </li>
                         <li>
@@ -115,6 +115,11 @@ const Navbar = () => {
                                 </li>
                                 <li onClick={handleMobileNavState} className='inline-block border-b border-[--clr-base-accent] py-2 hover:bg-[--clr-grey-light]  cursor-pointer'>
                                     <Link href='/learn-more'>Learn More</Link>
+                                </li>
+                                <li>
+                                    <Button path='/submit' >
+                                        Submit a Program <Icon icon="ArrowTopRight" className="fill-inherit" size="sm"/>
+                                    </Button>
                                 </li>
                             </ul>
                             <Logo className='absolute top-2 left-4'/>
