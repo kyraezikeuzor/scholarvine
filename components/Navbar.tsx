@@ -61,14 +61,20 @@ const Navbar = () => {
             
             <section className='flex flex-row items-center justify-between gap-5 w-full py-2 md:py-[1vh] p-5 md:px-[5vw] '>
                 
-                <ul className='w-1/3 flex flex-row items-center gap-16 '>
+                <ul className='w-full flex flex-row items-center gap-16 '>
                     <li>
                         <Logo/>
                     </li>
-                    <ul className='hidden md:flex flex-row font-bold w-full gap-6 text-base text-[--clr-base-text]'>
+                    <ul className='hidden md:flex flex-row font-semibold w-full gap-6 text-base text-[--clr-base-text]'>
                         <li>
-                            <Link href='/explore' className={`flex flex-row gap-2 ${pathname === '/explore' ? 'text-[--clr-blue-base]' : ''}`}>
-                                <Icon icon='Compass' size='sm' className={pathname === '/explore' ? 'fill-[--clr-blue-base]' : ''} />
+                            <Link href='/saved' className={`flex flex-row gap-2 ${pathname === '/saved' ? 'text-[--clr-blue-base]' : ''}`}>
+                                <Icon icon='Bookmark' size='sm' className={pathname === '/saved' ? 'fill-[--clr-blue-base]' : ''} />
+                                Your Saved Programs
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href='/learn-more' className={`flex flex-row gap-2 ${pathname === '/learn-more' ? 'text-[--clr-blue-base]' : ''}`}>
+                                <Icon icon='Location' size='sm' className={pathname === '/explore' ? 'fill-[--clr-blue-base]' : ''} />
                                 Learn More
                             </Link>
                         </li>
@@ -107,16 +113,15 @@ const Navbar = () => {
                         <div className='w-full h-auto relative font-semibold flex flex-col gap-2 p-4 rounded-xl'>
                             <ul className='mt-12 flex flex-col' onClick={handleMobileNavState}>
                                 <li onClick={handleMobileNavState} className='inline-block border-b border-[--clr-base-accent] py-2 hover:bg-[--clr-grey-light]  cursor-pointer'>
-                                    <Link href='/explore'>Explore</Link>
+                                    <Link href='/saved'>Your Saved Programs</Link>
                                 </li>
                                 <li onClick={handleMobileNavState} className='inline-block border-b border-[--clr-base-accent] py-2 hover:bg-[--clr-grey-light]  cursor-pointer'>
-                                    <Link href='/community'>Community</Link>
+                                    <Link href='/learn-more'>Learn More</Link>
                                 </li>
                             </ul>
                             <Logo className='absolute top-2 left-4'/>
                             <Icon icon='XCircle' size='lg' onClick={handleMobileNavState} className='absolute top-2 right-4 cursor-pointer'/>
                         </div>
-
                     </div>}
                 </ul>
                 

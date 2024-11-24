@@ -7,7 +7,7 @@ import SearchBar from '@/components/SearchBar'
 import ReadMore from '@/components/ReadMore'
 import Opportunity from '@/components/Opportunity'
 
-import ExplorePage from './explore/ExplorePage'
+import ExplorePage from '../components/ExplorePage'
 
 import { OPPORTUNITY_CATEGORIES, OPPORTUNITY_CATEGORIES_GROUPED, OPPORTUNITY_TYPES } from '@/lib/labels'
 import OPPORTUNITIES from '@/lib/opps.json'
@@ -26,8 +26,8 @@ export default function Home() {
       <header className=' w-full py-[2vh] flex flex-col items-center gap-5'>
 
         <div className='flex flex-col items-center gap-3'>
-          <span className='hidden text-sm md:text-base shadow-sm bg-[--clr-grey-light] text-[--clr-grey-dark] font-semibold rounded-3xl px-4 py-1'>
-            Solving Food Waste One Meal At a Time
+          <span className=' text-sm md:text-base shadow-sm bg-[--clr-grey-light] text-[--clr-grey-dark] font-semibold rounded-3xl px-4 py-1'>
+            Search & Save Programs
           </span>
           <h1 className='text-center mt-[1vh] text-4xl md:text-6xl lg:text-5xl tracking-tight font-semibold'>
           Supercharge your activity list <span className=''></span>
@@ -54,7 +54,6 @@ export default function Home() {
       </header>
 
       <section className="w-full flex flex-col items-center gap-5 py-[2vh]">
-          
           <ExplorePage/>
       </section>
       

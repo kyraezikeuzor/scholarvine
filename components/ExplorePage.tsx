@@ -1,7 +1,7 @@
 'use client'
 import React, {useState, useEffect} from 'react'
 import { Opportunity } from '@/types';
-import styles from './page.module.css'
+import styles from './ExplorePage.module.css'
 
 import Accordion from '@/components/Accordion'
 import Checkbox from '@/components/Checkbox'

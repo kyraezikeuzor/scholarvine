@@ -1,5 +1,5 @@
 import React from 'react'
-import ExplorePage from './ExplorePage'
+import ExplorePage from '../../components/ExplorePage'
 import SearchBar from '@/components/SearchBar'
 
 export default function Explore(){

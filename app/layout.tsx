@@ -4,7 +4,6 @@ import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
