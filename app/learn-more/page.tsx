@@ -55,7 +55,7 @@ export default function LearnMorePage() {
                 <p className="mt-4 text-base md:text-lg leading-relaxed">
                     We understand how overwhelming it can be to find the right opportunities amidst all the options 
                     available. ScholarVine simplifies this process by providing a user-friendly platform and carefully 
-                    curated listings that match your unique profile and aspirations. It's more than just a platform – 
+                    curated listings that match your unique profile and aspirations. It&apos;s more than just a platform – 
                     it&apos;s your partner in achieving success.
                 </p>
             </section>
