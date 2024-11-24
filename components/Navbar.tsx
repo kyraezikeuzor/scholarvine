@@ -65,16 +65,16 @@ const Navbar = () => {
                     <li>
                         <Logo/>
                     </li>
-                    <ul className='hidden md:flex flex-row font-semibold w-full gap-6 text-base text-[--clr-base-text]'>
+                    <ul className='hidden md:flex flex-row font-medium w-full gap-6 text-base text-[--clr-base-text]'>
                         <li>
-                            <Link href='/saved' className={`flex flex-row gap-2 ${pathname === '/saved' ? 'text-[--clr-blue-base]' : ''}`}>
-                                <Icon icon='Bookmark' size='sm' className={pathname === '/saved' ? 'fill-[--clr-blue-base]' : ''} />
+                            <Link href='/saved' className={`flex flex-row gap-2 ${pathname === '/saved' ? 'text-[--clr-grey-dark]' : ''}`}>
+                                <Icon icon='Bookmark' size='sm' className={pathname === '/saved' ? 'fill-[--clr-grey-dark]' : ''} />
                                 Your Saved Programs
                             </Link>
                         </li>
                         <li>
-                            <Link href='/learn-more' className={`flex flex-row gap-2 ${pathname === '/learn-more' ? 'text-[--clr-blue-base]' : ''}`}>
-                                <Icon icon='Location' size='sm' className={pathname === '/learn-more' ? 'fill-[--clr-blue-base]' : ''} />
+                            <Link href='/learn-more' className={`flex flex-row gap-2 ${pathname === '/learn-more' ? 'text-[--clr-grey-dark]' : ''}`}>
+                                <Icon icon='Location' size='sm' className={pathname === '/learn-more' ? 'fill-[--clr-grey-dark]' : ''} />
                                 Learn More
                             </Link>
                         </li>

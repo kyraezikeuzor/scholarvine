@@ -27,13 +27,13 @@ export default function Home() {
 
         <div className='flex flex-col items-center gap-3'>
           <span className=' text-sm md:text-base shadow-sm bg-[--clr-grey-light] text-[--clr-grey-dark] font-semibold rounded-3xl px-4 py-1'>
-            Search & Save Programs
+            Search & Save Prestigious Programs
           </span>
           <h1 className='text-center mt-[1vh] text-4xl md:text-6xl lg:text-5xl tracking-tight font-semibold'>
-            Supercharge your activity list <br className='hidden lg:block'/> with <span className=''>{OPPORTUNITIES.length}</span> academic opportunities
+            Supercharge your activity list <br className='hidden lg:block'/> with <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">{OPPORTUNITIES.length}</span> academic opportunities
           </h1>
           <p className='text-center text-sm md:text-lg text-[--clr-grey-dark]'>
-            Finding a new opportunity is one click away. Discover 100+ activities and programs today.
+            Finding a new opportunity is one click away. Discover prestgious activities and programs today.
           </p>
         </div>
 
