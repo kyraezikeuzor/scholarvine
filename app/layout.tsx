@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta property="og:image" content="https://drive.google.com/file/d/1LwzacBFnb3-avwlLr68U-LgLZ-7-hnM9/view?usp=sharing"/>
+        <meta property="og:image" content="/product-image.png"/>
       </head>
       <body className={inter.className}>
         <Navbar/>
