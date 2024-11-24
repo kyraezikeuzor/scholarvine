@@ -24,12 +24,11 @@ export default function SearchBar() {
                 <Icon icon="Search" button={true} className='fill-[--clr-grey-base]' />
             </span>
 
-
             {/*SEARCH RESULTS MODAL*/}
             {searchResults.length != 0 && 
             <div className='z-40 w-full absolute top-12 left-0 right-0 p-2 bg-[--clr-base] text-sm shadow-lg  flex flex-col gap-1 rounded-lg border border-[--clr-base-accent]'>
                 {searchResults.map((item,index)=> (
-                    <Link key={index} href={`/explore/o/1`} className=' relative flex flex-row w-full border-b border-[--clr-grey-light] py-1'> 
+                    <Link key={index} href={`/explore/o/1`} className='hover:bg-[--clr-grey-light] relative flex flex-row w-full border-b border-[--clr-grey-light] py-1'> 
                         <span className='ml-2'>{item}</span>
                         <Icon icon='Search' size='sm' button={true} className='fill-[--clr-grey-dark] absolute right-2'/>
                     </Link>

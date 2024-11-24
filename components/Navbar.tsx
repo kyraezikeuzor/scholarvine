@@ -9,7 +9,7 @@ import Theme from './Theme'
 import Icon from './Icon'
 
 import opps from '@/lib/opps.json'
-import { OPPORTUNITY_TYPES } from '@/lib/labels'
+
 
 import {getPath} from '@/utils/utils'
 

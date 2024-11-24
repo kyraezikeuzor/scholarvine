@@ -30,7 +30,7 @@ export default function Home() {
             Search & Save Programs
           </span>
           <h1 className='text-center mt-[1vh] text-4xl md:text-6xl lg:text-5xl tracking-tight font-semibold'>
-          Supercharge your activity list <span className=''></span>
+            Supercharge your activity list <br className='hidden lg:block'/> with <span className=''>{OPPORTUNITIES.length}</span> academic opportunities
           </h1>
           <p className='text-center text-sm md:text-lg text-[--clr-grey-dark]'>
             Finding a new opportunity is one click away. Discover 100+ activities and programs today.

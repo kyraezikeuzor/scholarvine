@@ -9,7 +9,7 @@ type Opportunity = {
     Description:string;
     Type: string;
     Location: string[];
-    ApplicationDeadline: Date | null;
+    ApplicationDeadline: Date | string | null;
     EducationLevel: string[];
     GradeLevel: number[];
     Tags: string[];

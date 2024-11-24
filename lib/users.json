@@ -1,13 +1,13 @@
 [
     {
         "Id":0,
-        "FirstName":"Lorelai",
-        "LastName":"Gilmore",
+        "FirstName":"ScholarVine",
+        "LastName":"",
         "SavedOpps":[0],
         "PostedOpps":[0,1,2],
-        "Username":"lorelaig2",
+        "Username":"scholarvine",
         "Password":"123456",
-        "Picture":"https://media.licdn.com/dms/image/C5603AQFcuRiwtxIlUg/profile-displayphoto-shrink_200_200/0/1625173224889?e=1711584000&v=beta&t=imAugpf7WkuGBo1wOHNYyju_hMA8-Z7gMdkLycSk3jE"
+        "Picture":"./logo-blue.png"
     },
     {
         "Id":1,
