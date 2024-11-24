@@ -56,7 +56,7 @@ export default function LearnMorePage() {
                     We understand how overwhelming it can be to find the right opportunities amidst all the options 
                     available. ScholarVine simplifies this process by providing a user-friendly platform and carefully 
                     curated listings that match your unique profile and aspirations. It's more than just a platform – 
-                    it's your partner in achieving success.
+                    it&apos;s your partner in achieving success.
                 </p>
             </section>
 
