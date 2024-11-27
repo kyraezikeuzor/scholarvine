@@ -56,7 +56,7 @@ const OppPage = ({params}:PageProps) => {
                     <span className='inline-block text-[11px] font-medium border border-[--clr-base-accent] px-[8px] py-[1px] rounded-xl bg-transparent'>{opp?.Company}</span>
                     <span className='inline-block text-[11px] font-medium border border-[--clr-base-accent] px-[8px] py-[1px] rounded-xl bg-transparent'>{opp?.Location}</span>
                 </div>
-                <span className='flex flex-row gap-1'>
+                <span className='flex flex-wrap gap-1'>
                     {opp?.Tags.map((item,index)=>(
                         <span key={index} className='inline-block text-[11px] font-medium border border-[--clr-base-accent] px-[8px] py-[1px] rounded-xl bg-transparent'>
                             {item}
