@@ -17,13 +17,13 @@ const ThemeButton = () => {
 
 
     useEffect(()=>{
-        const data = window.localStorage.getItem('SEDGE_APP_THEME');
+        const data = window.localStorage.getItem('SCHOLARVINE_APP_THEME');
         if (data != null) setShowDarkMode(JSON.parse(data))
     },[])
 
 
     useEffect(()=>{
-        window.localStorage.setItem('SEDGE_APP_THEME', JSON.stringify(showDarkMode))
+        window.localStorage.setItem('SCHOLARVINE_APP_THEME', JSON.stringify(showDarkMode))
     }, [showDarkMode])
 
     const changeTheme = () => {
