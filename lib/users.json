@@ -7,7 +7,7 @@
         "PostedOpps":[0,1,2],
         "Username":"scholarvine",
         "Password":"123456",
-        "Picture":"./logo-blue.png"
+        "Picture":"/logo-blue.png"
     },
     {
         "Id":1,

@@ -96,7 +96,7 @@ const Navbar = () => {
                 
 
                 {/*MOBILE NAVBAR RESPONSIVE CONTENT*/}
-                <ul className='md:hidden w-full flex flex-row items-center justify-end  gap-2'>
+                <ul className='md:hidden w-full flex flex-row items-center justify-end gap-2'>
                     <li>
                         <Theme/>
                     </li>
